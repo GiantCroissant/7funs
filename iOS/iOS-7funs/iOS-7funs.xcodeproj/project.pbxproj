@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3B5A41C51B248BBB00EBD78E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5A41C41B248BBB00EBD78E /* AppDelegate.swift */; };
-		3B5A41C71B248BBB00EBD78E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5A41C61B248BBB00EBD78E /* ViewController.swift */; };
-		3B5A41CA1B248BBB00EBD78E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5A41C81B248BBB00EBD78E /* Main.storyboard */; };
 		3B5A41CC1B248BBB00EBD78E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B5A41CB1B248BBB00EBD78E /* Images.xcassets */; };
 		3B5A41CF1B248BBB00EBD78E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5A41CD1B248BBB00EBD78E /* LaunchScreen.xib */; };
 		3B5A41DB1B248BBB00EBD78E /* iOS_7funsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5A41DA1B248BBB00EBD78E /* iOS_7funsTests.swift */; };
 		3B5A41E51B248BCA00EBD78E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3B5A41E41B248BCA00EBD78E /* .gitignore */; };
 		3B5A41E71B248C5400EBD78E /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 3B5A41E61B248C5400EBD78E /* Cartfile */; };
+		3B9338FE1B24A1D0000C7AAC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9338FD1B24A1D0000C7AAC /* MainViewController.swift */; };
+		3B9339001B24A1E4000C7AAC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9338FF1B24A1E4000C7AAC /* SecondViewController.swift */; };
+		3B9339061B24A3AB000C7AAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9339051B24A3AB000C7AAC /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +32,6 @@
 		3B5A41BF1B248BBB00EBD78E /* iOS-7funs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-7funs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5A41C31B248BBB00EBD78E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B5A41C41B248BBB00EBD78E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3B5A41C61B248BBB00EBD78E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3B5A41C91B248BBB00EBD78E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B5A41CB1B248BBB00EBD78E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3B5A41CE1B248BBB00EBD78E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3B5A41D41B248BBB00EBD78E /* iOS-7funsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-7funsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +39,9 @@
 		3B5A41DA1B248BBB00EBD78E /* iOS_7funsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_7funsTests.swift; sourceTree = "<group>"; };
 		3B5A41E41B248BCA00EBD78E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		3B5A41E61B248C5400EBD78E /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		3B9338FD1B24A1D0000C7AAC /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3B9338FF1B24A1E4000C7AAC /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		3B9339051B24A3AB000C7AAC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +85,10 @@
 		3B5A41C11B248BBB00EBD78E /* iOS-7funs */ = {
 			isa = PBXGroup;
 			children = (
-				3B5A41C41B248BBB00EBD78E /* AppDelegate.swift */,
-				3B5A41C61B248BBB00EBD78E /* ViewController.swift */,
-				3B5A41C81B248BBB00EBD78E /* Main.storyboard */,
-				3B5A41CB1B248BBB00EBD78E /* Images.xcassets */,
-				3B5A41CD1B248BBB00EBD78E /* LaunchScreen.xib */,
 				3B5A41C21B248BBB00EBD78E /* Supporting Files */,
+				3B9338FD1B24A1D0000C7AAC /* MainViewController.swift */,
+				3B9338FF1B24A1E4000C7AAC /* SecondViewController.swift */,
+				3B9339051B24A3AB000C7AAC /* Main.storyboard */,
 			);
 			path = "iOS-7funs";
 			sourceTree = "<group>";
@@ -96,6 +96,9 @@
 		3B5A41C21B248BBB00EBD78E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3B5A41CB1B248BBB00EBD78E /* Images.xcassets */,
+				3B5A41CD1B248BBB00EBD78E /* LaunchScreen.xib */,
+				3B5A41C41B248BBB00EBD78E /* AppDelegate.swift */,
 				3B5A41C31B248BBB00EBD78E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -199,8 +202,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B5A41E71B248C5400EBD78E /* Cartfile in Resources */,
+				3B9339061B24A3AB000C7AAC /* Main.storyboard in Resources */,
 				3B5A41E51B248BCA00EBD78E /* .gitignore in Resources */,
-				3B5A41CA1B248BBB00EBD78E /* Main.storyboard in Resources */,
 				3B5A41CF1B248BBB00EBD78E /* LaunchScreen.xib in Resources */,
 				3B5A41CC1B248BBB00EBD78E /* Images.xcassets in Resources */,
 			);
@@ -220,8 +223,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B5A41C71B248BBB00EBD78E /* ViewController.swift in Sources */,
+				3B9339001B24A1E4000C7AAC /* SecondViewController.swift in Sources */,
 				3B5A41C51B248BBB00EBD78E /* AppDelegate.swift in Sources */,
+				3B9338FE1B24A1D0000C7AAC /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,14 +248,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3B5A41C81B248BBB00EBD78E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3B5A41C91B248BBB00EBD78E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3B5A41CD1B248BBB00EBD78E /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -417,6 +413,7 @@
 				3B5A41E01B248BBB00EBD78E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B5A41E11B248BBB00EBD78E /* Build configuration list for PBXNativeTarget "iOS-7funsTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +422,7 @@
 				3B5A41E31B248BBB00EBD78E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
