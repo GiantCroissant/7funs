@@ -1,35 +1,30 @@
 package com.giantcroissant.android_7funs;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 
-public class MainActivity extends ActionBarActivity {
+public class QuestionAndReaponseActivity extends ActionBarActivity {
+
+    private Toolbar toolbar;                              // Declaring the Toolbar Object
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_question_and_reaponse);
+
+        toolbar = (Toolbar) findViewById(R.id.tool_bar); // Attaching the layout to the toolbar object
+//        setSupportActionBar(toolbar);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_question_and_reaponse, menu);
         return true;
-    }
-
-    public void onClick(View view) {
-        if (view.getId() == R.id.questionButton) {
-
-            Intent i = new Intent(MainActivity.this, QuestionAndReaponseActivity.class);
-            startActivity(i);
-        }
-
     }
 
     @Override
