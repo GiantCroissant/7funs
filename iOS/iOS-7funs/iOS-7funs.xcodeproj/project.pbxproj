@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B4A56CA1B27BB7C00B35466 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4A56C71B27BB5900B35466 /* Alamofire.framework */; };
+		3B4A56CC1B27BB8300B35466 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4A56CB1B27BB8300B35466 /* Realm.framework */; };
+		3B4A56CE1B27BB8600B35466 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4A56CD1B27BB8600B35466 /* RealmSwift.framework */; };
+		3B4A56D01B27BB8B00B35466 /* XCDYouTubeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4A56CF1B27BB8B00B35466 /* XCDYouTubeKit.framework */; };
+		3B4A56D41B27C53700B35466 /* ShowInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B4A56D31B27C53700B35466 /* ShowInfo.storyboard */; };
 		3B5A41C51B248BBB00EBD78E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5A41C41B248BBB00EBD78E /* AppDelegate.swift */; };
 		3B5A41CC1B248BBB00EBD78E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B5A41CB1B248BBB00EBD78E /* Images.xcassets */; };
 		3B5A41CF1B248BBB00EBD78E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5A41CD1B248BBB00EBD78E /* LaunchScreen.xib */; };
@@ -29,6 +34,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B4A56C71B27BB5900B35466 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		3B4A56CB1B27BB8300B35466 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		3B4A56CD1B27BB8600B35466 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		3B4A56CF1B27BB8B00B35466 /* XCDYouTubeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCDYouTubeKit.framework; path = Carthage/Build/iOS/XCDYouTubeKit.framework; sourceTree = "<group>"; };
+		3B4A56D31B27C53700B35466 /* ShowInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShowInfo.storyboard; sourceTree = "<group>"; };
 		3B5A41BF1B248BBB00EBD78E /* iOS-7funs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-7funs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5A41C31B248BBB00EBD78E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B5A41C41B248BBB00EBD78E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +59,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B4A56CA1B27BB7C00B35466 /* Alamofire.framework in Frameworks */,
+				3B4A56CC1B27BB8300B35466 /* Realm.framework in Frameworks */,
+				3B4A56CE1B27BB8600B35466 /* RealmSwift.framework in Frameworks */,
+				3B4A56D01B27BB8B00B35466 /* XCDYouTubeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +76,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B4A56C91B27BB6900B35466 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B4A56CF1B27BB8B00B35466 /* XCDYouTubeKit.framework */,
+				3B4A56CD1B27BB8600B35466 /* RealmSwift.framework */,
+				3B4A56CB1B27BB8300B35466 /* Realm.framework */,
+				3B4A56C71B27BB5900B35466 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B4A56D21B27C31600B35466 /* Show Info */ = {
+			isa = PBXGroup;
+			children = (
+				3B4A56D31B27C53700B35466 /* ShowInfo.storyboard */,
+			);
+			name = "Show Info";
+			sourceTree = "<group>";
+		};
 		3B5A41B61B248BBB00EBD78E = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +103,7 @@
 				3B5A41C11B248BBB00EBD78E /* iOS-7funs */,
 				3B5A41D71B248BBB00EBD78E /* iOS-7funsTests */,
 				3B5A41C01B248BBB00EBD78E /* Products */,
+				3B4A56C91B27BB6900B35466 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +119,7 @@
 		3B5A41C11B248BBB00EBD78E /* iOS-7funs */ = {
 			isa = PBXGroup;
 			children = (
+				3B4A56D21B27C31600B35466 /* Show Info */,
 				3B5A41C21B248BBB00EBD78E /* Supporting Files */,
 				3B9338FD1B24A1D0000C7AAC /* MainViewController.swift */,
 				3B9338FF1B24A1E4000C7AAC /* SecondViewController.swift */,
@@ -131,6 +166,7 @@
 				3B5A41BB1B248BBB00EBD78E /* Sources */,
 				3B5A41BC1B248BBB00EBD78E /* Frameworks */,
 				3B5A41BD1B248BBB00EBD78E /* Resources */,
+				3B4A56D11B27BBB600B35466 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -204,6 +240,7 @@
 				3B5A41E71B248C5400EBD78E /* Cartfile in Resources */,
 				3B9339061B24A3AB000C7AAC /* Main.storyboard in Resources */,
 				3B5A41E51B248BCA00EBD78E /* .gitignore in Resources */,
+				3B4A56D41B27C53700B35466 /* ShowInfo.storyboard in Resources */,
 				3B5A41CF1B248BBB00EBD78E /* LaunchScreen.xib in Resources */,
 				3B5A41CC1B248BBB00EBD78E /* Images.xcassets in Resources */,
 			);
@@ -217,6 +254,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B4A56D11B27BBB600B35466 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/XCDYouTubeKit.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3B5A41BB1B248BBB00EBD78E /* Sources */ = {
@@ -344,6 +401,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "iOS-7funs/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -354,6 +415,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "iOS-7funs/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -25,11 +25,32 @@
                                     <segue destination="UL2-W1-NkY" kind="show" id="4oe-0V-SRz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWw-4c-hph">
+                                <rect key="frame" x="251.5" y="334" width="97" height="30"/>
+                                <state key="normal" title="Alamofire Test">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="alamoFireTest:" destination="X2k-w1-n72" eventType="touchUpInside" id="Tfr-vO-Q8H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGP-jZ-JfD">
+                                <rect key="frame" x="239" y="72" width="123" height="30"/>
+                                <state key="normal" title="Show Info">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showInfo:" destination="X2k-w1-n72" eventType="touchUpInside" id="7zv-RV-OWM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="ZWw-4c-hph" secondAttribute="centerY" constant="-49" id="4g1-Cx-muE"/>
+                            <constraint firstAttribute="centerX" secondItem="ZWw-4c-hph" secondAttribute="centerX" id="5an-Dg-c1U"/>
                             <constraint firstAttribute="centerX" secondItem="oZf-X8-iku" secondAttribute="centerX" id="NFv-Hi-B36"/>
                             <constraint firstAttribute="centerY" secondItem="oZf-X8-iku" secondAttribute="centerY" id="iHZ-fu-35o"/>
+                            <constraint firstItem="ZWw-4c-hph" firstAttribute="top" secondItem="oZf-X8-iku" secondAttribute="bottom" constant="19" id="qBY-pQ-BuK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zi2-vP-GV9"/>
