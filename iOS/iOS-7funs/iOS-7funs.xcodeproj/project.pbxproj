@@ -78,18 +78,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-<<<<<<< HEAD
 		3B2401261B283FD200D3304D /* Videos */ = {
-=======
-		3B169AB71B27F3A6005EA790 /* Videos */ = {
->>>>>>> f83df50719280ce1b8b65cd3fefade40df7cb7d5
 			isa = PBXGroup;
 			children = (
 			);
 			name = Videos;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
 		3B2401271B283FDF00D3304D /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,8 +120,6 @@
 			name = Scratchcard;
 			sourceTree = "<group>";
 		};
-=======
->>>>>>> f83df50719280ce1b8b65cd3fefade40df7cb7d5
 		3B4A56C91B27BB6900B35466 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
