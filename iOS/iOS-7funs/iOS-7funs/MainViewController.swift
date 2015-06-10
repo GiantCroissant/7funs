@@ -29,15 +29,14 @@ class Person: Object {
 class MainViewController: UIViewController {
 
     @IBAction func showInfo(sender: UIButton) {
+
         var storyboard = UIStoryboard(name: "ShowInfo", bundle: nil)
+
         var controller = storyboard.instantiateInitialViewController() as! UIViewController
-//        self.presentViewController(controller , animated: true, completion: nil)
+
         self.navigationController?.pushViewController(controller, animated: true)
     }
 
-    @IBAction func alamoFireTest(sender: UIButton) {
-        usageTest()
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

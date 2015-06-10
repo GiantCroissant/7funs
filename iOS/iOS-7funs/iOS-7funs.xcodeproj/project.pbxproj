@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B169AB91B27F534005EA790 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B169AB81B27F534005EA790 /* InfoViewController.swift */; };
 		3B4A56CA1B27BB7C00B35466 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4A56C71B27BB5900B35466 /* Alamofire.framework */; };
 		3B4A56CC1B27BB8300B35466 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4A56CB1B27BB8300B35466 /* Realm.framework */; };
 		3B4A56CE1B27BB8600B35466 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4A56CD1B27BB8600B35466 /* RealmSwift.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B169AB81B27F534005EA790 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		3B4A56C71B27BB5900B35466 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		3B4A56CB1B27BB8300B35466 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		3B4A56CD1B27BB8600B35466 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
@@ -76,6 +78,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B2401261B283FD200D3304D /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Videos;
+			sourceTree = "<group>";
+		};
+		3B2401271B283FDF00D3304D /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Recipes;
+			sourceTree = "<group>";
+		};
+		3B2401281B283FE700D3304D /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Collections;
+			sourceTree = "<group>";
+		};
+		3B2401291B283FED00D3304D /* QandA */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = QandA;
+			sourceTree = "<group>";
+		};
+		3B24012A1B283FF200D3304D /* ExternalLinks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ExternalLinks;
+			sourceTree = "<group>";
+		};
+		3B24012B1B283FF700D3304D /* Scratchcard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Scratchcard;
+			sourceTree = "<group>";
+		};
 		3B4A56C91B27BB6900B35466 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				3B4A56D31B27C53700B35466 /* ShowInfo.storyboard */,
+				3B169AB81B27F534005EA790 /* InfoViewController.swift */,
 			);
 			name = "Show Info";
 			sourceTree = "<group>";
@@ -120,6 +165,12 @@
 			isa = PBXGroup;
 			children = (
 				3B4A56D21B27C31600B35466 /* Show Info */,
+				3B2401261B283FD200D3304D /* Videos */,
+				3B2401271B283FDF00D3304D /* Recipes */,
+				3B2401281B283FE700D3304D /* Collections */,
+				3B2401291B283FED00D3304D /* QandA */,
+				3B24012A1B283FF200D3304D /* ExternalLinks */,
+				3B24012B1B283FF700D3304D /* Scratchcard */,
 				3B5A41C21B248BBB00EBD78E /* Supporting Files */,
 				3B9338FD1B24A1D0000C7AAC /* MainViewController.swift */,
 				3B9338FF1B24A1E4000C7AAC /* SecondViewController.swift */,
@@ -282,6 +333,7 @@
 			files = (
 				3B9339001B24A1E4000C7AAC /* SecondViewController.swift in Sources */,
 				3B5A41C51B248BBB00EBD78E /* AppDelegate.swift in Sources */,
+				3B169AB91B27F534005EA790 /* InfoViewController.swift in Sources */,
 				3B9338FE1B24A1D0000C7AAC /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
