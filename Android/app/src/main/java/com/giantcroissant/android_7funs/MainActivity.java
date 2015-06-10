@@ -26,7 +26,7 @@ public class MainActivity extends ActionBarActivity {
     public void onClick(View view) {
         if (view.getId() == R.id.questionButton) {
 
-            Intent i = new Intent(MainActivity.this, QuestionAndReaponseActivity.class);
+            Intent i = new Intent(MainActivity.this, QuestionAndResponseActivity.class);
             startActivity(i);
         }
 
