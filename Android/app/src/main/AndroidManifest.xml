@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".QuestionAndReaponseActivity"
+            android:name=".QuestionAndResponseActivity"
             android:label="@string/title_activity_question_and_reaponse" >
         </activity>
     </application>
