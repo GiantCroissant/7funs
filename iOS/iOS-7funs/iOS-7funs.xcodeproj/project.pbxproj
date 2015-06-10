@@ -76,6 +76,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B169AB71B27F3A6005EA790 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Videos;
+			sourceTree = "<group>";
+		};
 		3B4A56C91B27BB6900B35466 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +126,7 @@
 		3B5A41C11B248BBB00EBD78E /* iOS-7funs */ = {
 			isa = PBXGroup;
 			children = (
+				3B169AB71B27F3A6005EA790 /* Videos */,
 				3B4A56D21B27C31600B35466 /* Show Info */,
 				3B5A41C21B248BBB00EBD78E /* Supporting Files */,
 				3B9338FD1B24A1D0000C7AAC /* MainViewController.swift */,
