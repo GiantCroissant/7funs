@@ -20,6 +20,7 @@
 		3B0ADD571B292E6D00692ABE /* QandAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0ADD561B292E6D00692ABE /* QandAViewController.swift */; };
 		3B0ADD591B292E7600692ABE /* ExternalLinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0ADD581B292E7600692ABE /* ExternalLinksViewController.swift */; };
 		3B0ADD5B1B292E8300692ABE /* ScratchcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0ADD5A1B292E8300692ABE /* ScratchcardViewController.swift */; };
+		3B3AD71D1B293CF700B3498A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3AD71C1B293CF700B3498A /* SwiftyJSON.framework */; };
 		3B4A56CA1B27BB7C00B35466 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4A56C71B27BB5900B35466 /* Alamofire.framework */; };
 		3B4A56CC1B27BB8300B35466 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4A56CB1B27BB8300B35466 /* Realm.framework */; };
 		3B4A56CE1B27BB8600B35466 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4A56CD1B27BB8600B35466 /* RealmSwift.framework */; };
@@ -60,6 +61,7 @@
 		3B0ADD561B292E6D00692ABE /* QandAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QandAViewController.swift; sourceTree = "<group>"; };
 		3B0ADD581B292E7600692ABE /* ExternalLinksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalLinksViewController.swift; sourceTree = "<group>"; };
 		3B0ADD5A1B292E8300692ABE /* ScratchcardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScratchcardViewController.swift; sourceTree = "<group>"; };
+		3B3AD71C1B293CF700B3498A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		3B4A56C71B27BB5900B35466 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		3B4A56CB1B27BB8300B35466 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		3B4A56CD1B27BB8600B35466 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				3B4A56CC1B27BB8300B35466 /* Realm.framework in Frameworks */,
 				3B4A56CE1B27BB8600B35466 /* RealmSwift.framework in Frameworks */,
 				3B4A56D01B27BB8B00B35466 /* XCDYouTubeKit.framework in Frameworks */,
+				3B3AD71D1B293CF700B3498A /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +162,7 @@
 		3B4A56C91B27BB6900B35466 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3B3AD71C1B293CF700B3498A /* SwiftyJSON.framework */,
 				3B4A56CF1B27BB8B00B35466 /* XCDYouTubeKit.framework */,
 				3B4A56CD1B27BB8600B35466 /* RealmSwift.framework */,
 				3B4A56CB1B27BB8300B35466 /* Realm.framework */,
@@ -359,6 +363,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/XCDYouTubeKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 			);
 			outputPaths = (
 			);
