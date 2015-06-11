@@ -1,33 +1,31 @@
 package com.giantcroissant.android_7funs;
 
-
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
+
+import io.realm.RealmList;
 
 /**
  * Created by liyihao on 15/6/10.
  */
-public class Question {
+public class ResponseOfQuestion {
 
     private String id;
-    private String title;
     private String content;
     private String ownerName;
     private String ownerIconUrl;
-    private ArrayList<ResponseOfQuestion> responses;
     private Date createTime;
+    private Question question;
 
-    public Question(String id,String title,String content,String ownerName,String ownerIconUrl)
-    {
+    public ResponseOfQuestion(String id,String content, String ownerName, String ownerIconUrl,Question question) {
         this.id = id;
-        this.title = title;
         this.content = content;
         this.ownerName = ownerName;
         this.ownerIconUrl = ownerIconUrl;
         this.createTime = new Date(System.currentTimeMillis());
-        this.responses = new ArrayList<ResponseOfQuestion>();
+        this.question = question;
     }
+
 
     public String getId() {
         return id;
@@ -59,65 +57,37 @@ public class Question {
         this.createTime = createTime;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getContent() {
-        return content;
-    }
+    return content;
+}
 
     public void setContent(String content) {
-        this.content = content;
-    }
+    this.content = content;
+}
 
     public String getOwnerName() {
-        return ownerName;
-    }
+    return ownerName;
+}
 
     public void setOwnerName(String ownerName) {
-        this.ownerName = ownerName;
-    }
+    this.ownerName = ownerName;
+}
 
     public String getOwnerIconUrl() {
-        return ownerName;
-    }
+    return ownerName;
+}
 
     public void setOwnerIconUrl(String ownerIconUrl) {
-        this.ownerIconUrl = ownerIconUrl;
+    this.ownerIconUrl = ownerIconUrl;
+}
+
+    public Question getQuestion()
+    {
+        return question;
     }
 
-    public ArrayList<ResponseOfQuestion> getResponseList()
+    public void setQuestion(Question question)
     {
-        return responses;
-    }
-
-    public int getResponseListCount()
-    {
-        return responses.size();
-    }
-
-    public void setResponseList(ArrayList<ResponseOfQuestion> responses)
-    {
-        this.responses = responses;
-    }
-
-    public void addResponse(ResponseOfQuestion response)
-    {
-        this.responses.add(response);
-    }
-
-    public void removeResponse(ResponseOfQuestion response)
-    {
-        this.responses.remove(response);
-    }
-
-    public void clearResponseList()
-    {
-        this.responses.clear();
+        this.question = question;
     }
 }

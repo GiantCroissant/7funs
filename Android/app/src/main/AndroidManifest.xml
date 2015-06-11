@@ -20,6 +20,18 @@
             android:name=".QuestionAndResponseActivity"
             android:label="@string/title_activity_question_and_reaponse" >
         </activity>
+        <activity
+            android:name=".ResponseActivity"
+            android:label="@string/title_activity_response" >
+        </activity>
+        <activity
+            android:name=".NewQuestionActivity"
+            android:label="@string/title_activity_new_question" >
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login" >
+        </activity>
     </application>
 
 </manifest>
