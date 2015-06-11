@@ -7,7 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B169AB91B27F534005EA790 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B169AB81B27F534005EA790 /* InfoViewController.swift */; };
+		3B0ADD431B29298000692ABE /* Videos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0ADD421B29298000692ABE /* Videos.storyboard */; };
+		3B0ADD451B29299000692ABE /* Recipes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0ADD441B29299000692ABE /* Recipes.storyboard */; };
+		3B0ADD471B29299D00692ABE /* Collections.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0ADD461B29299D00692ABE /* Collections.storyboard */; };
+		3B0ADD491B2929A900692ABE /* QandA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0ADD481B2929A900692ABE /* QandA.storyboard */; };
+		3B0ADD4B1B2929B700692ABE /* ExternalLinks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0ADD4A1B2929B700692ABE /* ExternalLinks.storyboard */; };
+		3B0ADD4D1B2929C900692ABE /* Scratchcard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0ADD4C1B2929C800692ABE /* Scratchcard.storyboard */; };
+		3B0ADD4F1B292E4600692ABE /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0ADD4E1B292E4600692ABE /* VideosViewController.swift */; };
+		3B0ADD511B292E5300692ABE /* ShowInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0ADD501B292E5300692ABE /* ShowInfoViewController.swift */; };
+		3B0ADD531B292E5C00692ABE /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0ADD521B292E5C00692ABE /* RecipesViewController.swift */; };
+		3B0ADD551B292E6500692ABE /* CollectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0ADD541B292E6500692ABE /* CollectionsViewController.swift */; };
+		3B0ADD571B292E6D00692ABE /* QandAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0ADD561B292E6D00692ABE /* QandAViewController.swift */; };
+		3B0ADD591B292E7600692ABE /* ExternalLinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0ADD581B292E7600692ABE /* ExternalLinksViewController.swift */; };
+		3B0ADD5B1B292E8300692ABE /* ScratchcardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0ADD5A1B292E8300692ABE /* ScratchcardViewController.swift */; };
 		3B4A56CA1B27BB7C00B35466 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4A56C71B27BB5900B35466 /* Alamofire.framework */; };
 		3B4A56CC1B27BB8300B35466 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4A56CB1B27BB8300B35466 /* Realm.framework */; };
 		3B4A56CE1B27BB8600B35466 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4A56CD1B27BB8600B35466 /* RealmSwift.framework */; };
@@ -35,7 +47,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3B169AB81B27F534005EA790 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		3B0ADD421B29298000692ABE /* Videos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Videos.storyboard; sourceTree = "<group>"; };
+		3B0ADD441B29299000692ABE /* Recipes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recipes.storyboard; sourceTree = "<group>"; };
+		3B0ADD461B29299D00692ABE /* Collections.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Collections.storyboard; sourceTree = "<group>"; };
+		3B0ADD481B2929A900692ABE /* QandA.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QandA.storyboard; sourceTree = "<group>"; };
+		3B0ADD4A1B2929B700692ABE /* ExternalLinks.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ExternalLinks.storyboard; sourceTree = "<group>"; };
+		3B0ADD4C1B2929C800692ABE /* Scratchcard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Scratchcard.storyboard; sourceTree = "<group>"; };
+		3B0ADD4E1B292E4600692ABE /* VideosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = "<group>"; };
+		3B0ADD501B292E5300692ABE /* ShowInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowInfoViewController.swift; sourceTree = "<group>"; };
+		3B0ADD521B292E5C00692ABE /* RecipesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
+		3B0ADD541B292E6500692ABE /* CollectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionsViewController.swift; sourceTree = "<group>"; };
+		3B0ADD561B292E6D00692ABE /* QandAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QandAViewController.swift; sourceTree = "<group>"; };
+		3B0ADD581B292E7600692ABE /* ExternalLinksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalLinksViewController.swift; sourceTree = "<group>"; };
+		3B0ADD5A1B292E8300692ABE /* ScratchcardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScratchcardViewController.swift; sourceTree = "<group>"; };
 		3B4A56C71B27BB5900B35466 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		3B4A56CB1B27BB8300B35466 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		3B4A56CD1B27BB8600B35466 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
@@ -81,6 +105,8 @@
 		3B2401261B283FD200D3304D /* Videos */ = {
 			isa = PBXGroup;
 			children = (
+				3B0ADD421B29298000692ABE /* Videos.storyboard */,
+				3B0ADD4E1B292E4600692ABE /* VideosViewController.swift */,
 			);
 			name = Videos;
 			sourceTree = "<group>";
@@ -88,6 +114,8 @@
 		3B2401271B283FDF00D3304D /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
+				3B0ADD441B29299000692ABE /* Recipes.storyboard */,
+				3B0ADD521B292E5C00692ABE /* RecipesViewController.swift */,
 			);
 			name = Recipes;
 			sourceTree = "<group>";
@@ -95,6 +123,8 @@
 		3B2401281B283FE700D3304D /* Collections */ = {
 			isa = PBXGroup;
 			children = (
+				3B0ADD461B29299D00692ABE /* Collections.storyboard */,
+				3B0ADD541B292E6500692ABE /* CollectionsViewController.swift */,
 			);
 			name = Collections;
 			sourceTree = "<group>";
@@ -102,6 +132,8 @@
 		3B2401291B283FED00D3304D /* QandA */ = {
 			isa = PBXGroup;
 			children = (
+				3B0ADD481B2929A900692ABE /* QandA.storyboard */,
+				3B0ADD561B292E6D00692ABE /* QandAViewController.swift */,
 			);
 			name = QandA;
 			sourceTree = "<group>";
@@ -109,6 +141,8 @@
 		3B24012A1B283FF200D3304D /* ExternalLinks */ = {
 			isa = PBXGroup;
 			children = (
+				3B0ADD4A1B2929B700692ABE /* ExternalLinks.storyboard */,
+				3B0ADD581B292E7600692ABE /* ExternalLinksViewController.swift */,
 			);
 			name = ExternalLinks;
 			sourceTree = "<group>";
@@ -116,6 +150,8 @@
 		3B24012B1B283FF700D3304D /* Scratchcard */ = {
 			isa = PBXGroup;
 			children = (
+				3B0ADD4C1B2929C800692ABE /* Scratchcard.storyboard */,
+				3B0ADD5A1B292E8300692ABE /* ScratchcardViewController.swift */,
 			);
 			name = Scratchcard;
 			sourceTree = "<group>";
@@ -135,7 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				3B4A56D31B27C53700B35466 /* ShowInfo.storyboard */,
-				3B169AB81B27F534005EA790 /* InfoViewController.swift */,
+				3B0ADD501B292E5300692ABE /* ShowInfoViewController.swift */,
 			);
 			name = "Show Info";
 			sourceTree = "<group>";
@@ -164,7 +200,6 @@
 		3B5A41C11B248BBB00EBD78E /* iOS-7funs */ = {
 			isa = PBXGroup;
 			children = (
-				3B169AB71B27F3A6005EA790 /* Videos */,
 				3B4A56D21B27C31600B35466 /* Show Info */,
 				3B2401261B283FD200D3304D /* Videos */,
 				3B2401271B283FDF00D3304D /* Recipes */,
@@ -291,10 +326,16 @@
 			files = (
 				3B5A41E71B248C5400EBD78E /* Cartfile in Resources */,
 				3B9339061B24A3AB000C7AAC /* Main.storyboard in Resources */,
+				3B0ADD491B2929A900692ABE /* QandA.storyboard in Resources */,
+				3B0ADD4D1B2929C900692ABE /* Scratchcard.storyboard in Resources */,
+				3B0ADD4B1B2929B700692ABE /* ExternalLinks.storyboard in Resources */,
 				3B5A41E51B248BCA00EBD78E /* .gitignore in Resources */,
 				3B4A56D41B27C53700B35466 /* ShowInfo.storyboard in Resources */,
+				3B0ADD451B29299000692ABE /* Recipes.storyboard in Resources */,
+				3B0ADD471B29299D00692ABE /* Collections.storyboard in Resources */,
 				3B5A41CF1B248BBB00EBD78E /* LaunchScreen.xib in Resources */,
 				3B5A41CC1B248BBB00EBD78E /* Images.xcassets in Resources */,
+				3B0ADD431B29298000692ABE /* Videos.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,9 +373,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B0ADD571B292E6D00692ABE /* QandAViewController.swift in Sources */,
+				3B0ADD591B292E7600692ABE /* ExternalLinksViewController.swift in Sources */,
+				3B0ADD551B292E6500692ABE /* CollectionsViewController.swift in Sources */,
+				3B0ADD5B1B292E8300692ABE /* ScratchcardViewController.swift in Sources */,
 				3B9339001B24A1E4000C7AAC /* SecondViewController.swift in Sources */,
 				3B5A41C51B248BBB00EBD78E /* AppDelegate.swift in Sources */,
-				3B169AB91B27F534005EA790 /* InfoViewController.swift in Sources */,
+				3B0ADD511B292E5300692ABE /* ShowInfoViewController.swift in Sources */,
+				3B0ADD4F1B292E4600692ABE /* VideosViewController.swift in Sources */,
+				3B0ADD531B292E5C00692ABE /* RecipesViewController.swift in Sources */,
 				3B9338FE1B24A1D0000C7AAC /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

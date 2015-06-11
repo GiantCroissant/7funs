@@ -1,24 +1,23 @@
 //
-//  InfoViewController.swift
+//  CollectionsViewController.swift
 //  iOS-7funs
 //
-//  Created by Bryan Lin on 6/10/15.
+//  Created by Bryan Lin on 6/11/15.
 //  Copyright (c) 2015 giantcroissant. All rights reserved.
 //
 
 import UIKit
 
-class InfoViewController: UIViewController {
-
-    @IBAction func testHelloworld(sender: UIButton) {
-        println("helloworld")
-    }
-
+class CollectionsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = false
     }
 
     override func didReceiveMemoryWarning() {
