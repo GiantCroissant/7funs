@@ -1,31 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="120dp"
+    android:layout_width="match_parent" android:layout_height="100dp"
     android:gravity="start"
     android:orientation="horizontal"
-    android:clickable="true">
+    android:clickable="false"
+    android:background="@color/White"
+    android:nestedScrollingEnabled="false">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/imageView"
+        android:id="@+id/response_owner_icon"
         android:layout_centerVertical="true"
         android:src="@drawable/owner_icon"
         android:scaleType="fitCenter"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_weight="3"
-        android:background="@color/White" />
+        android:background="@color/White"
+        android:clickable="false"
+        android:nestedScrollingEnabled="false" />
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_toRightOf="@+id/imageView"
-        android:layout_toEndOf="@+id/imageView"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_alignBottom="@+id/imageView"
-        android:layout_weight="1">
+        android:layout_toRightOf="@+id/response_owner_icon"
+        android:layout_toEndOf="@+id/response_owner_icon"
+        android:layout_alignTop="@+id/response_owner_icon"
+        android:layout_alignBottom="@+id/response_owner_icon"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:nestedScrollingEnabled="false">
 
         <TextView
             android:layout_width="match_parent"
@@ -33,25 +39,31 @@
             android:layout_gravity="center"
             android:text="Gina_12345 : Happy"
             android:id="@+id/question_title"
-            android:textSize="25dp"
-            android:layout_alignTop="@+id/imageView"
-            android:layout_toRightOf="@+id/imageView"
+            android:textSize="20dp"
+            android:layout_alignTop="@+id/response_owner_icon"
+            android:layout_toRightOf="@+id/response_owner_icon"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_weight="1"
-            android:background="#ffffffff" />
+            android:background="#ffffffff"
+            android:clickable="false"
+            android:nestedScrollingEnabled="false" />
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="4">
+            android:layout_weight="2.5"
+            android:clickable="false"
+            android:nestedScrollingEnabled="false">
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="2">
+                android:layout_weight="2"
+                android:clickable="false"
+                android:nestedScrollingEnabled="false">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -59,22 +71,30 @@
                     android:id="@+id/time_icon"
                     android:layout_weight="3"
                     android:background="@color/White"
-                    android:src="@drawable/create_time" />
+                    android:src="@drawable/create_time"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="top"
+                    android:clickable="false"
+                    android:nestedScrollingEnabled="false" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center"
+                    android:layout_gravity="top"
                     android:text="一天前"
                     android:textColor="#ff9a9a9a"
                     android:id="@+id/create_time_text"
                     android:textSize="20dp"
-                    android:layout_alignTop="@+id/imageView"
-                    android:layout_toRightOf="@+id/imageView"
+                    android:layout_alignTop="@+id/response_owner_icon"
+                    android:layout_toRightOf="@+id/response_owner_icon"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
                     android:layout_weight="1"
-                    android:background="#ffffffff" />
+                    android:background="#ffffffff"
+                    android:textAlignment="center"
+                    android:gravity="top"
+                    android:clickable="false"
+                    android:nestedScrollingEnabled="false" />
 
             </LinearLayout>
 
@@ -82,7 +102,10 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:background="@color/White"
+                android:clickable="false"
+                android:nestedScrollingEnabled="false">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -90,22 +113,29 @@
                     android:id="@+id/response_icon"
                     android:layout_weight="6"
                     android:background="@color/White"
-                    android:src="@drawable/ic_response" />
+                    android:src="@drawable/ic_response"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="top"
+                    android:clickable="false"
+                    android:nestedScrollingEnabled="false" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center"
+                    android:layout_gravity="top"
                     android:text="10篇回應"
                     android:textColor="#ff9a9a9a"
                     android:id="@+id/response_count"
                     android:textSize="20dp"
-                    android:layout_alignTop="@+id/imageView"
-                    android:layout_toRightOf="@+id/imageView"
+                    android:layout_alignTop="@+id/response_owner_icon"
+                    android:layout_toRightOf="@+id/response_owner_icon"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
                     android:layout_weight="1"
-                    android:background="#ffffffff" />
+                    android:background="#ffffffff"
+                    android:gravity="top"
+                    android:clickable="false"
+                    android:nestedScrollingEnabled="false" />
             </LinearLayout>
 
         </LinearLayout>

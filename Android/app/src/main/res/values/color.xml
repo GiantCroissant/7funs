@@ -4,4 +4,6 @@
     <color name="ColorPrimaryDark">#E64A19</color>
     <color name="White">#FFFFFF</color>
 
+    <color name="NameColor">#FF5522</color>
+
 </resources>

@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.giantcroissant.android_7funs.NewQuestionActivity"
+    android:background="#ffbcbcbc">
+
+    <include
+        android:id="@+id/new_question_tool_bar"
+        layout="@layout/tool_bar"
+        ></include>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/new_question_tool_bar">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/new_title_editText"
+            android:layout_below="@+id/new_question_tool_bar"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/White"
+            android:layout_weight="8"
+            android:layout_marginBottom="1dp"
+            android:hint="請輸入標題"
+            android:textSize="20dp"
+            android:paddingLeft="20dp"
+            android:autoText="true"
+            android:textColor="#ff000000"
+            android:singleLine="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/new_content_editText"
+            android:layout_below="@+id/new_question_tool_bar"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/White"
+            android:layout_weight="1"
+            android:layout_marginBottom="0dp"
+            android:hint="請輸入內容"
+            android:textSize="20dp"
+            android:gravity="left|top"
+            android:padding="20dp"
+            android:autoText="true"
+            android:textColor="#ff000000" />
+    </LinearLayout>
+
+
+</RelativeLayout>
