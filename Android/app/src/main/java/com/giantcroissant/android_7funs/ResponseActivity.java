@@ -67,18 +67,6 @@ public class ResponseActivity extends ActionBarActivity {
         createTimeText = (TextView) findViewById(R.id.question_content_create_time);
     }
 
-    private void setValueToView()
-    {
-        contentText.setText(question.getOwnerName() + " " + question.getContent(), TextView.BufferType.SPANNABLE);
-
-        Spannable span = (Spannable) contentText.getText();
-//        span.setSpan(new RelativeSizeSpan(0.8f), 0, questions.getOwnerName().length(), 0);
-        span.setSpan(new ForegroundColorSpan(0xFFFF5522), 0, question.getOwnerName().length(),
-                Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
-
-        createTimeText.setText(DateDistance.twoDateDistance(question.getCreateTime(),new Date(System.currentTimeMillis())));
-    }
-
     private void setToolbar()
     {
         setSupportActionBar(toolbar);
@@ -88,6 +76,8 @@ public class ResponseActivity extends ActionBarActivity {
         textView = (TextView) findViewById(R.id.tool_bar_title);
         textView.setText(question.getTitle());
     }
+
+
 
     private void setButtonListener() {
 
@@ -105,6 +95,21 @@ public class ResponseActivity extends ActionBarActivity {
 
         toolbar.setNavigationOnClickListener(listener);
     }
+
+
+    private void setValueToView()
+    {
+        contentText.setText(question.getOwnerName() + " " + question.getContent(), TextView.BufferType.SPANNABLE);
+
+        Spannable span = (Spannable) contentText.getText();
+//        span.setSpan(new RelativeSizeSpan(0.8f), 0, questions.getOwnerName().length(), 0);
+        span.setSpan(new ForegroundColorSpan(0xFFFF5522), 0, question.getOwnerName().length(),
+                Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
+
+        createTimeText.setText(DateDistance.twoDateDistance(question.getCreateTime(), new Date(System.currentTimeMillis())));
+    }
+
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

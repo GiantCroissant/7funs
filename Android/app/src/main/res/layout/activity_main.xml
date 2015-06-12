@@ -20,28 +20,32 @@
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/imageButton5"
+            android:id="@+id/showAndCookButton"
             android:layout_weight="1"
             android:src="@drawable/teacher"
             android:background="#000600ff"
             android:scaleType="centerCrop"
             android:padding="2dp"
             android:adjustViewBounds="true"
-            android:paddingTop="0dp"
-            android:paddingBottom="0dp" />
+            android:clickable="true"
+            android:onClick="onClick"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:cropToPadding="true" />
 
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/imageButton4"
-            android:layout_weight="2"
+            android:layout_weight="3"
             android:src="@drawable/video"
             android:background="#000600ff"
             android:scaleType="centerCrop"
             android:padding="2dp"
             android:adjustViewBounds="false"
-            android:paddingTop="0dp"
-            android:paddingBottom="0dp" />
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:cropToPadding="true" />
 
     </LinearLayout>
 
@@ -101,7 +105,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/questionButton"
                     android:layout_weight="1"
-                    android:src="@drawable/good"
+                    android:src="@drawable/question"
                     android:background="#00000000"
                     android:scaleType="fitXY"
                     android:padding="2dp"
@@ -126,7 +130,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageButton"
                     android:layout_weight="1"
-                    android:src="@drawable/question"
+                    android:src="@drawable/context"
                     android:background="#000600ff"
                     android:scaleType="fitXY"
                     android:padding="2dp"
@@ -145,7 +149,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageButton2"
                     android:layout_weight="1"
-                    android:src="@drawable/context"
+                    android:src="@drawable/good"
                     android:background="#000600ff"
                     android:scaleType="fitXY"
                     android:padding="2dp"

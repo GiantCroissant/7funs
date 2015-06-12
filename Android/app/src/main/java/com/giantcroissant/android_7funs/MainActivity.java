@@ -31,6 +31,13 @@ public class MainActivity extends ActionBarActivity {
 
         }
 
+        if (view.getId() == R.id.showAndCookButton) {
+
+            Intent i = new Intent(MainActivity.this, ShowInfoActivity.class);
+            startActivity(i);
+
+        }
+
     }
 
     @Override
