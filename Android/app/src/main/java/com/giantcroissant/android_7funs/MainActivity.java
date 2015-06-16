@@ -38,6 +38,13 @@ public class MainActivity extends ActionBarActivity {
 
         }
 
+        if (view.getId() == R.id.videoListButton) {
+
+            Intent i = new Intent(MainActivity.this, VideoListActivity.class);
+            startActivity(i);
+
+        }
+
     }
 
     @Override

@@ -3,7 +3,6 @@ package com.giantcroissant.android_7funs;
 import android.content.Context;
 import android.text.Spannable;
 import android.text.style.ForegroundColorSpan;
-import android.text.style.RelativeSizeSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,10 +11,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.TextView.BufferType;
-import java.text.SimpleDateFormat;
+
 import java.util.Date;
 import java.util.List;
-import java.util.TimeZone;
 
 /**
  * Created by liyihao on 15/6/10.

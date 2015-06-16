@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="100dp"
+    android:gravity="start"
+    android:orientation="horizontal"
+    android:clickable="false"
+    android:background="@color/White"
+    android:nestedScrollingEnabled="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.2">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/video_short_image"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="2"
+            android:background="@color/White"
+            android:clickable="false"
+            android:nestedScrollingEnabled="false"
+            android:src="#ff409da2"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="99:99"
+            android:id="@+id/video_time_text"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:background="#a0000000"
+            android:clickable="false"
+            android:nestedScrollingEnabled="false"
+            android:textColor="@color/White"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="false"
+            android:gravity="bottom|right"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="30dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/video_short_image"
+        android:layout_toEndOf="@+id/video_short_image"
+        android:layout_alignTop="@+id/video_short_image"
+        android:layout_alignBottom="@+id/video_short_image"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:nestedScrollingEnabled="false">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="美食料理王：蝦蝦的美味"
+            android:id="@+id/video_title"
+            android:textSize="20dp"
+            android:layout_alignTop="@+id/video_short_image"
+            android:layout_toRightOf="@+id/video_short_image"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="0.7"
+            android:background="#ffffffff"
+            android:clickable="false"
+            android:nestedScrollingEnabled="false"
+            android:textStyle="bold"
+            android:maxLines="2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="CH37東風電視台＿料理美食"
+            android:id="@+id/video_content_text"
+            android:textSize="18dp"
+            android:layout_alignTop="@+id/video_short_image"
+            android:layout_toRightOf="@+id/video_short_image"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="1.2"
+            android:background="#ffffffff"
+            android:clickable="false"
+            android:nestedScrollingEnabled="false"
+            android:maxLines="1" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:clickable="false"
+            android:nestedScrollingEnabled="false">
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/White"
+                android:clickable="false"
+                android:nestedScrollingEnabled="false">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:text="一天前"
+                    android:textColor="#ff9a9a9a"
+                    android:id="@+id/video_create_time_text"
+                    android:textSize="18dp"
+                    android:layout_alignParentRight="false"
+                    android:layout_alignParentEnd="false"
+                    android:layout_weight="1"
+                    android:background="#ffffffff"
+                    android:textAlignment="center"
+                    android:gravity="top"
+                    android:clickable="false"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:text="· 觀看次數："
+                    android:textColor="#ff9a9a9a"
+                    android:id="@+id/textView3"
+                    android:textSize="18dp"
+                    android:layout_alignParentRight="false"
+                    android:layout_alignParentEnd="false"
+                    android:layout_weight="1"
+                    android:background="#ffffffff"
+                    android:gravity="top"
+                    android:clickable="false"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_toRightOf="@+id/create_time_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:text="99,999"
+                    android:textColor="#ff9a9a9a"
+                    android:id="@+id/video_look_count"
+                    android:textSize="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_weight="1"
+                    android:background="#ffffffff"
+                    android:gravity="top"
+                    android:clickable="false"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_toRightOf="@+id/textView3"
+                    android:layout_toEndOf="@+id/textView3" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
