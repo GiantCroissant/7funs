@@ -68,13 +68,15 @@
             <ImageButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageButton7"
+                android:id="@+id/cookBookButton"
                 android:layout_weight="1"
                 android:src="@drawable/book"
                 android:background="#000600ff"
                 android:scaleType="fitXY"
                 android:padding="2dp"
-                android:adjustViewBounds="true" />
+                android:adjustViewBounds="true"
+                android:onClick="onClick"
+                android:clickable="true" />
 
             <ImageButton
                 android:layout_width="match_parent"
