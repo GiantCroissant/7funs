@@ -162,7 +162,7 @@
         <!--Videos-->
         <scene sceneID="8oA-Xc-xKs">
             <objects>
-                <viewController id="Yic-Ht-kgx" sceneMemberID="viewController">
+                <viewController id="Yic-Ht-kgx" customClass="RecipesVideoViewController" customModule="iOS_7funs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="68I-XZ-Wct"/>
                         <viewControllerLayoutGuide type="bottom" id="SA9-Sc-muU"/>
@@ -170,10 +170,71 @@
                     <view key="view" contentMode="scaleToFill" id="OFb-dk-tBr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZBe-B3-ss3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="tUN-uy-XWt"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsU-lg-u07" userLabel="View 1">
+                                <rect key="frame" x="177" y="265" width="46" height="30"/>
+                                <state key="normal" title="View 1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeToView1:" destination="Yic-Ht-kgx" eventType="touchUpInside" id="daq-56-h15"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cR0-Xm-2v7" userLabel="View 3">
+                                <rect key="frame" x="177" y="310" width="46" height="30"/>
+                                <state key="normal" title="View 3">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeToView3:" destination="Yic-Ht-kgx" eventType="touchUpInside" id="Tn1-Iw-GuP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoD-Qb-0jg" userLabel="View 4">
+                                <rect key="frame" x="377" y="310" width="46" height="30"/>
+                                <state key="normal" title="View 4">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeToView4:" destination="Yic-Ht-kgx" eventType="touchUpInside" id="ZxR-0l-1Pu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8G-Ch-ULe" userLabel="View 2">
+                                <rect key="frame" x="377" y="265" width="46" height="30"/>
+                                <state key="normal" title="View 2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeToView2:" destination="Yic-Ht-kgx" eventType="touchUpInside" id="jga-0R-3PQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c8G-Ch-ULe" firstAttribute="top" secondItem="ZBe-B3-ss3" secondAttribute="bottom" constant="15" id="3r6-KZ-RTQ"/>
+                            <constraint firstItem="ZBe-B3-ss3" firstAttribute="leading" secondItem="OFb-dk-tBr" secondAttribute="leading" id="68P-Pu-qih"/>
+                            <constraint firstItem="cR0-Xm-2v7" firstAttribute="centerX" secondItem="OFb-dk-tBr" secondAttribute="centerX" constant="-100" id="OWW-0q-OQs"/>
+                            <constraint firstItem="c8G-Ch-ULe" firstAttribute="centerX" secondItem="OFb-dk-tBr" secondAttribute="centerX" constant="100" id="T3d-Nb-yaJ"/>
+                            <constraint firstItem="rsU-lg-u07" firstAttribute="centerX" secondItem="OFb-dk-tBr" secondAttribute="centerX" constant="-100" id="V3J-7k-YWM"/>
+                            <constraint firstItem="CoD-Qb-0jg" firstAttribute="top" secondItem="c8G-Ch-ULe" secondAttribute="bottom" constant="15" id="lNW-QQ-WuO"/>
+                            <constraint firstItem="CoD-Qb-0jg" firstAttribute="centerX" secondItem="OFb-dk-tBr" secondAttribute="centerX" constant="100" id="lX6-pc-vbj"/>
+                            <constraint firstItem="cR0-Xm-2v7" firstAttribute="top" secondItem="rsU-lg-u07" secondAttribute="bottom" constant="15" id="nN4-uo-beY"/>
+                            <constraint firstItem="ZBe-B3-ss3" firstAttribute="top" secondItem="OFb-dk-tBr" secondAttribute="top" id="oQc-7L-mRZ"/>
+                            <constraint firstAttribute="trailing" secondItem="ZBe-B3-ss3" secondAttribute="trailing" id="oUt-U7-mFR"/>
+                            <constraint firstItem="rsU-lg-u07" firstAttribute="top" secondItem="ZBe-B3-ss3" secondAttribute="bottom" constant="15" id="qBf-0X-dZW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Videos" id="LUJ-Jt-OgK"/>
                     <navigationItem key="navigationItem" title="Videos" id="x4y-2m-trm"/>
+                    <connections>
+                        <outlet property="currentVideo" destination="ZBe-B3-ss3" id="8uC-mP-LHi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aDB-7l-yiy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -217,6 +278,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NIp-zz-yei" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1390" y="482"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jkS-PX-IGt">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="QO9-er-wEN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ace-iQ-tFx"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vhw-kw-20V"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NYT-Tj-X4l">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JgJ-L2-fhR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
