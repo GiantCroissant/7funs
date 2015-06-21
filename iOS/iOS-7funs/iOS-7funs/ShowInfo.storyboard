@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--料理老師-->
         <scene sceneID="xZq-8f-5cp">
             <objects>
-                <viewController id="BH6-T3-U7e" sceneMemberID="viewController">
+                <viewController id="BH6-T3-U7e" customClass="TeacherInfoViewController" customModule="iOS_7funs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="urd-Tb-QtF"/>
                         <viewControllerLayoutGuide type="bottom" id="cJC-eA-zai"/>
@@ -16,16 +16,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="9Yy-2N-CYn"/>
+                    <tabBarItem key="tabBarItem" title="料理老師" id="9Yy-2N-CYn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KzH-jS-Q1t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1689" y="263.25"/>
         </scene>
-        <!--Item 1-->
+        <!--節目介紹-->
         <scene sceneID="XC5-s8-T0L">
             <objects>
-                <viewController id="pVf-0n-IcV" sceneMemberID="viewController">
+                <viewController id="pVf-0n-IcV" customClass="ShowInfoViewController" customModule="iOS_7funs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6o5-nv-fGH"/>
                         <viewControllerLayoutGuide type="bottom" id="BX0-8F-XuT"/>
@@ -34,16 +34,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="ejG-Q8-UM4"/>
+                    <tabBarItem key="tabBarItem" title="節目介紹" id="ejG-Q8-UM4">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QKh-Rl-Rws" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1689" y="-383.25"/>
         </scene>
-        <!--Show Info View Controller-->
+        <!--Show Info Tab Bar View Controller-->
         <scene sceneID="uko-V4-4kc">
             <objects>
-                <tabBarController id="Qhi-ko-qPu" customClass="ShowInfoViewController" customModule="iOS_7funs" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="Qhi-ko-qPu" customClass="ShowInfoTabBarViewController" customModule="iOS_7funs" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="RbB-MG-u0h">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
