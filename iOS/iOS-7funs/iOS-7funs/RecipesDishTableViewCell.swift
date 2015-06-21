@@ -11,7 +11,9 @@ import UIKit
 class RecipesDishTableViewCell: UITableViewCell {
 
     @IBOutlet weak var viewedCount: UILabel!
+    @IBOutlet weak var collectedCount: UILabel!
     //var viewedCount: Int = 0
+    @IBOutlet weak var dishImage: UIImageView!
     //var collectedCount: Int = 0
     //var imagePath: String = ""
     

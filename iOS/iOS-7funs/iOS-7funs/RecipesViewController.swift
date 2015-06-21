@@ -10,6 +10,7 @@ import UIKit
 
 class RecipesViewController: UIViewController {
 
+    @IBOutlet weak var dishTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 

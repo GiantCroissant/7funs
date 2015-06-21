@@ -58,10 +58,29 @@ class RecipesTableViewController: UITableViewController {
         // Configure the cell...
         let dish = dishes[indexPath.row]
         cell.viewedCount.text = String(dish.viewedCount)
-        //cell.collectedCount = dish.collectedCount
+        cell.collectedCount.text = String(dish.collectedCount)
+        
+        let dirPaths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        
+        let docsDir = dirPaths[0] as! String
+        let destinationPath = docsDir.stringByAppendingPathComponent(dish.image)
+
+        cell.dishImage.image = loadImageFromPath(destinationPath)
         //cell.imagePath = dish.image
 
         return cell
+    }
+    
+    func loadImageFromPath(path: String) -> UIImage? {
+        
+        let image = UIImage(contentsOfFile: path)
+        
+        if image == nil {
+            
+            println("missing image at: \(path)")
+        }
+        println("\(path)") // this is just for you to see the path in case you want to go to the directory, using Finder.
+        return image
     }
 
     /*
