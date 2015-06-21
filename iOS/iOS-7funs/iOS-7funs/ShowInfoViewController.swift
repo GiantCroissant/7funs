@@ -11,11 +11,11 @@ import UIKit
 class ShowInfoViewController: UIViewController {
 
     override func viewWillAppear(animated: Bool) {
-        changeNaviationBarTitle()
+        changeNaviationBarTitle("節目資訊")
     }
 
-    func changeNaviationBarTitle() {
-        self.navigationController?.navigationBar.topItem?.title = "節目資訊"
+    func changeNaviationBarTitle(title: String) {
+        self.navigationController?.navigationBar.topItem?.title = title
     }
 
 }

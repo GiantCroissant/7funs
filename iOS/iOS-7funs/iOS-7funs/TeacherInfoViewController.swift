@@ -11,11 +11,11 @@ import UIKit
 class TeacherInfoViewController: UIViewController {
 
     override func viewWillAppear(animated: Bool) {
-        changeNaviationBarTitle()
+        changeNaviationBarTitle("料理老師")
     }
 
-    func changeNaviationBarTitle() {
-        self.navigationController?.navigationBar.topItem?.title = "料理老師"
+    func changeNaviationBarTitle(title: String) {
+        self.navigationController?.navigationBar.topItem?.title = title
     }
 
 }
