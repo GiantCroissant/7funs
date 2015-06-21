@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShowInfoViewController: UIViewController {
+class ShowInfoViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
