@@ -14,6 +14,8 @@
 		09EADF2F1B378F5500DD5723 /* RecipesDishDetailTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EADF2E1B378F5500DD5723 /* RecipesDishDetailTabBarController.swift */; };
 		09EADF311B378F7300DD5723 /* DishDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EADF301B378F7300DD5723 /* DishDetail.swift */; };
 		09EADF331B37B03800DD5723 /* RecipesInstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EADF321B37B03800DD5723 /* RecipesInstructionViewController.swift */; };
+		09ECF5451B3847E5001FC3EF /* VideosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ECF5441B3847E5001FC3EF /* VideosTableViewController.swift */; };
+		09ECF5471B384FF0001FC3EF /* VideosDishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ECF5461B384FF0001FC3EF /* VideosDishTableViewCell.swift */; };
 		3B0ADD431B29298000692ABE /* Videos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0ADD421B29298000692ABE /* Videos.storyboard */; };
 		3B0ADD451B29299000692ABE /* Recipes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0ADD441B29299000692ABE /* Recipes.storyboard */; };
 		3B0ADD471B29299D00692ABE /* Collections.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0ADD461B29299D00692ABE /* Collections.storyboard */; };
@@ -65,6 +67,8 @@
 		09EADF2E1B378F5500DD5723 /* RecipesDishDetailTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesDishDetailTabBarController.swift; sourceTree = "<group>"; };
 		09EADF301B378F7300DD5723 /* DishDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DishDetail.swift; sourceTree = "<group>"; };
 		09EADF321B37B03800DD5723 /* RecipesInstructionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesInstructionViewController.swift; sourceTree = "<group>"; };
+		09ECF5441B3847E5001FC3EF /* VideosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideosTableViewController.swift; sourceTree = "<group>"; };
+		09ECF5461B384FF0001FC3EF /* VideosDishTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideosDishTableViewCell.swift; sourceTree = "<group>"; };
 		3B0ADD421B29298000692ABE /* Videos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Videos.storyboard; sourceTree = "<group>"; };
 		3B0ADD441B29299000692ABE /* Recipes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recipes.storyboard; sourceTree = "<group>"; };
 		3B0ADD461B29299D00692ABE /* Collections.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Collections.storyboard; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 			children = (
 				3B0ADD421B29298000692ABE /* Videos.storyboard */,
 				3B0ADD4E1B292E4600692ABE /* VideosViewController.swift */,
+				09ECF5441B3847E5001FC3EF /* VideosTableViewController.swift */,
+				09ECF5461B384FF0001FC3EF /* VideosDishTableViewCell.swift */,
 			);
 			name = Videos;
 			sourceTree = "<group>";
@@ -430,7 +436,9 @@
 				0997B6041B32C664000534BE /* RecipesDishTableViewCell.swift in Sources */,
 				09EADF331B37B03800DD5723 /* RecipesInstructionViewController.swift in Sources */,
 				3B0ADD4F1B292E4600692ABE /* VideosViewController.swift in Sources */,
+				09ECF5451B3847E5001FC3EF /* VideosTableViewController.swift in Sources */,
 				3B0ADD531B292E5C00692ABE /* RecipesViewController.swift in Sources */,
+				09ECF5471B384FF0001FC3EF /* VideosDishTableViewCell.swift in Sources */,
 				0997B6021B32C4E7000534BE /* RecipesTableViewController.swift in Sources */,
 				09EADF311B378F7300DD5723 /* DishDetail.swift in Sources */,
 				3B9338FE1B24A1D0000C7AAC /* MainViewController.swift in Sources */,
