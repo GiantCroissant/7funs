@@ -13,8 +13,45 @@
                         <viewControllerLayoutGuide type="bottom" id="cJC-eA-zai"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="d76-vt-GZW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xYa-jt-Daj">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <connections>
+                                    <segue destination="eVc-Hg-cLR" kind="embed" id="vO2-e8-QcS"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xYa-jt-Daj" firstAttribute="top" secondItem="d76-vt-GZW" secondAttribute="top" id="NPb-XO-Bph"/>
+                            <constraint firstAttribute="trailing" secondItem="xYa-jt-Daj" secondAttribute="trailing" id="Q4e-qr-qsz"/>
+                            <constraint firstItem="xYa-jt-Daj" firstAttribute="leading" secondItem="d76-vt-GZW" secondAttribute="leading" id="h64-V9-gk1"/>
+                            <constraint firstItem="cJC-eA-zai" firstAttribute="top" secondItem="xYa-jt-Daj" secondAttribute="bottom" id="hif-Ss-0E3"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="xYa-jt-Daj"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="NPb-XO-Bph"/>
+                                <exclude reference="Q4e-qr-qsz"/>
+                                <exclude reference="h64-V9-gk1"/>
+                                <exclude reference="hif-Ss-0E3"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="xYa-jt-Daj"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="NPb-XO-Bph"/>
+                                <include reference="Q4e-qr-qsz"/>
+                                <include reference="h64-V9-gk1"/>
+                                <include reference="hif-Ss-0E3"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="料理老師" id="9Yy-2N-CYn"/>
                 </viewController>
@@ -31,6 +68,7 @@
                         <viewControllerLayoutGuide type="bottom" id="BX0-8F-XuT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VHz-ud-o6E">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -60,6 +98,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kId-oB-uEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="759" y="-60.75"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="VsU-qS-bEt">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="eVc-Hg-cLR" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R0E-Ue-Ye5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2610" y="263.25"/>
         </scene>
     </scenes>
 </document>
