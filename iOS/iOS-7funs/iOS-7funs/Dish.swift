@@ -17,6 +17,7 @@ class Dish: Object {
     dynamic var viewedCount = 0
     dynamic var collectedCount = 0
     dynamic var image = ""
+    //dynamic var videos: [String] = [""]
     //    dynamic var videos = ["", "", "", ""]
     //
     //    override static func indexedProperties() -> [String] {

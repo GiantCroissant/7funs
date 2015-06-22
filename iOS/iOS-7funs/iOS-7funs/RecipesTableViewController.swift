@@ -87,6 +87,18 @@ class RecipesTableViewController: UITableViewController {
         return image
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "dishDetailSegue" {
+            var destinationVC: RecipesDishDetailTabBarController = segue.destinationViewController as! RecipesDishDetailTabBarController
+            
+            var indexPath = self.tableView!.indexPathForSelectedRow()
+            
+            let dish = dishes[indexPath!.row]
+            destinationVC.dishDetail = DishDetail(viewedCount: dish.viewedCount, collectedCount: dish.collectedCount)
+            
+        }
+    }
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

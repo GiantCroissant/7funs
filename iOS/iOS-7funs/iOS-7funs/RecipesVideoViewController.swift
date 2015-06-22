@@ -10,6 +10,8 @@ import UIKit
 
 class RecipesVideoViewController: UIViewController {
     
+    var dishDetail: DishDetail!
+    
     var player : XCDYouTubeVideoPlayerViewController = XCDYouTubeVideoPlayerViewController(videoIdentifier: "lDcqxj2Xsy4")
 
     @IBOutlet weak var currentVideo: UIView!

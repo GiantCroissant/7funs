@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fS6-Lg-yWU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E11f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fS6-Lg-yWU">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -145,7 +145,7 @@
                                     <outlet property="collectedCount" destination="9lk-96-wYs" id="tdH-LL-ZT7"/>
                                     <outlet property="dishImage" destination="wD8-P9-4Ts" id="s8I-il-D5O"/>
                                     <outlet property="viewedCount" destination="h7N-ER-j6j" id="HIV-Fe-jq6"/>
-                                    <segue destination="uE9-5k-VDu" kind="show" id="TmS-vT-vzB"/>
+                                    <segue destination="uE9-5k-VDu" kind="show" identifier="dishDetailSegue" id="TmS-vT-vzB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -243,7 +243,7 @@
         <!--Instructions-->
         <scene sceneID="Mg9-ng-WNL">
             <objects>
-                <viewController id="lrp-R1-21v" sceneMemberID="viewController">
+                <viewController id="lrp-R1-21v" customClass="RecipesInstructionViewController" customModule="iOS_7funs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="B2K-2I-HKH"/>
                         <viewControllerLayoutGuide type="bottom" id="39W-yx-3MJ"/>
@@ -260,10 +260,10 @@
             </objects>
             <point key="canvasLocation" x="2174" y="10"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Recipes Dish Detail Tab Bar Controller-->
         <scene sceneID="6TH-de-n73">
             <objects>
-                <tabBarController id="uE9-5k-VDu" sceneMemberID="viewController">
+                <tabBarController id="uE9-5k-VDu" customClass="RecipesDishDetailTabBarController" customModule="iOS_7funs" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="zee-gx-pwg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
