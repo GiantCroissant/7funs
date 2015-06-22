@@ -95,6 +95,13 @@ class MainViewController: UIViewController {
                         // Just write down the name here, when later retrieving file, check if file exists or not
                         dish.image = subJson["image"]["name"].string!
                         
+                        dish.video1 = subJson["video1"].string!
+                        dish.video2 = subJson["video2"].string!
+                        dish.video3 = subJson["video3"].string!
+                        dish.video4 = subJson["video4"].string!
+                        //dish.videos = [ RealmString() ]
+                        //dish.videos[0] = subJson["image"]["videos"][0].string!
+                        
                         // Leave video address blank for now
 
                         realm.add(dish, update: true)

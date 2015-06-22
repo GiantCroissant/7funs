@@ -22,7 +22,12 @@ class RecipesVideoViewController: UIViewController {
         
         // Hard code the youtube id here for testing, later should be replaced with
         // ids passing along from table view
-        //player = XCDYouTubeVideoPlayerViewController(videoIdentifier: "lDcqxj2Xsy4#t=5m22s")
+        
+        println(dishDetail.video1)
+        println(dishDetail.video2)
+        println(dishDetail.video3)
+        println(dishDetail.video4)
+        player = XCDYouTubeVideoPlayerViewController(videoIdentifier: dishDetail.video1)
         player.presentInView(currentVideo)
         player.moviePlayer.initialPlaybackTime = 100
         player.moviePlayer.shouldAutoplay = false
@@ -34,8 +39,9 @@ class RecipesVideoViewController: UIViewController {
         let playedTime = player.moviePlayer.currentPlaybackTime
         println(playedTime)
         player.moviePlayer.stop()
-
-        player = XCDYouTubeVideoPlayerViewController(videoIdentifier: "lDcqxj2Xsy4")
+        
+        // Should refactory the code later
+        player = XCDYouTubeVideoPlayerViewController(videoIdentifier: dishDetail.video1)
         player.presentInView(currentVideo)
         player.moviePlayer.initialPlaybackTime = playedTime
         player.moviePlayer.shouldAutoplay = false
@@ -48,7 +54,7 @@ class RecipesVideoViewController: UIViewController {
         println(playedTime)
         player.moviePlayer.stop()
 
-        player = XCDYouTubeVideoPlayerViewController(videoIdentifier: "lDcqxj2Xsy4")
+        player = XCDYouTubeVideoPlayerViewController(videoIdentifier: dishDetail.video2)
         player.presentInView(currentVideo)
         player.moviePlayer.initialPlaybackTime = playedTime
         player.moviePlayer.shouldAutoplay = false
@@ -57,9 +63,29 @@ class RecipesVideoViewController: UIViewController {
     }
     
     @IBAction func changeToView3(sender: AnyObject) {
+        let playedTime = player.moviePlayer.currentPlaybackTime
+        println(playedTime)
+        player.moviePlayer.stop()
+        
+        player = XCDYouTubeVideoPlayerViewController(videoIdentifier: dishDetail.video3)
+        player.presentInView(currentVideo)
+        player.moviePlayer.initialPlaybackTime = playedTime
+        player.moviePlayer.shouldAutoplay = false
+        player.moviePlayer.prepareToPlay()
+        player.moviePlayer.play()
     }
     
     @IBAction func changeToView4(sender: AnyObject) {
+        let playedTime = player.moviePlayer.currentPlaybackTime
+        println(playedTime)
+        player.moviePlayer.stop()
+        
+        player = XCDYouTubeVideoPlayerViewController(videoIdentifier: dishDetail.video4)
+        player.presentInView(currentVideo)
+        player.moviePlayer.initialPlaybackTime = playedTime
+        player.moviePlayer.shouldAutoplay = false
+        player.moviePlayer.prepareToPlay()
+        player.moviePlayer.play()
     }
     
     override func didReceiveMemoryWarning() {

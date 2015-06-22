@@ -10,6 +10,10 @@ import UIKit
 
 import RealmSwift
 
+//class RealmString: Object {
+//    dynamic var content = ""
+//}
+
 class Dish: Object {
     dynamic var id = ""
     dynamic var cook = ""
@@ -17,6 +21,11 @@ class Dish: Object {
     dynamic var viewedCount = 0
     dynamic var collectedCount = 0
     dynamic var image = ""
+    dynamic var video1 = ""
+    dynamic var video2 = ""
+    dynamic var video3 = ""
+    dynamic var video4 = ""
+    //let videos = List<RealmString>()
     //dynamic var videos: [String] = [""]
     //    dynamic var videos = ["", "", "", ""]
     //

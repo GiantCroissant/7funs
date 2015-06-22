@@ -23,8 +23,12 @@ class RecipesDishDetailTabBarController: UITabBarController {
         let instructionVC = vcs![0] as! RecipesInstructionViewController
         let videoVC = vcs![1] as! RecipesVideoViewController
         
-        instructionVC.dishDetail = DishDetail(viewedCount: self.dishDetail.viewedCount, collectedCount: self.dishDetail.collectedCount)
-        videoVC.dishDetail = DishDetail(viewedCount: self.dishDetail.viewedCount, collectedCount: self.dishDetail.collectedCount)
+        instructionVC.dishDetail = DishDetail(
+            cook: self.dishDetail.cook, dishName: self.dishDetail.dishName, viewedCount: self.dishDetail.viewedCount, collectedCount: self.dishDetail.collectedCount,
+            imagePath: self.dishDetail.imagePath, video1: self.dishDetail.video1, video2: self.dishDetail.video2, video3: self.dishDetail.video3, video4: self.dishDetail.video4)
+        videoVC.dishDetail = DishDetail(
+            cook: self.dishDetail.cook, dishName: self.dishDetail.dishName, viewedCount: self.dishDetail.viewedCount, collectedCount: self.dishDetail.collectedCount,
+            imagePath: self.dishDetail.imagePath, video1: self.dishDetail.video1, video2: self.dishDetail.video2, video3: self.dishDetail.video3, video4: self.dishDetail.video4)
     }
 
     override func didReceiveMemoryWarning() {

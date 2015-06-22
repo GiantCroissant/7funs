@@ -75,6 +75,7 @@ class RecipesTableViewController: UITableViewController {
         return cell
     }
     
+    // Should do the refactory code extracting to utility class
     func loadImageFromPath(path: String) -> UIImage? {
         
         let image = UIImage(contentsOfFile: path)
@@ -94,7 +95,9 @@ class RecipesTableViewController: UITableViewController {
             var indexPath = self.tableView!.indexPathForSelectedRow()
             
             let dish = dishes[indexPath!.row]
-            destinationVC.dishDetail = DishDetail(viewedCount: dish.viewedCount, collectedCount: dish.collectedCount)
+            destinationVC.dishDetail = DishDetail(
+                cook: dish.cook, dishName: dish.name, viewedCount: dish.viewedCount, collectedCount: dish.collectedCount,
+                imagePath: dish.image, video1: dish.video1, video2: dish.video2, video3: dish.video3, video4: dish.video4)
             
         }
     }

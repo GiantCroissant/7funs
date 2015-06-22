@@ -251,10 +251,27 @@
                     <view key="view" contentMode="scaleToFill" id="Nlh-9H-hfX">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Ay-b3-rWg">
+                                <rect key="frame" x="15" y="0.0" width="570" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="108-y9-Zki"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Ay-b3-rWg" firstAttribute="leading" secondItem="Nlh-9H-hfX" secondAttribute="leading" constant="15" id="1vA-M9-KZg"/>
+                            <constraint firstAttribute="trailing" secondItem="8Ay-b3-rWg" secondAttribute="trailing" constant="15" id="ANU-ya-1bc"/>
+                            <constraint firstAttribute="centerX" secondItem="8Ay-b3-rWg" secondAttribute="centerX" id="KwQ-qb-wjs"/>
+                            <constraint firstItem="8Ay-b3-rWg" firstAttribute="top" secondItem="Nlh-9H-hfX" secondAttribute="top" id="qBK-uW-ueL"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Instructions" id="6jB-5W-4Tw"/>
                     <navigationItem key="navigationItem" title="Instructions" id="zYJ-77-WfV"/>
+                    <connections>
+                        <outlet property="dishImage" destination="8Ay-b3-rWg" id="0Oo-N6-Zdy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gq-gJ-nzk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
