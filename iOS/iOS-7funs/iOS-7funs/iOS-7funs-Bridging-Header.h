@@ -11,4 +11,6 @@
 
 #import <XCDYouTubeKit/XCDYouTubeKit.h>
 
+#import "YTPlayerView.h"
+
 #endif

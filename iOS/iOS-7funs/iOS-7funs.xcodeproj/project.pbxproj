@@ -16,6 +16,8 @@
 		09EADF331B37B03800DD5723 /* RecipesInstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EADF321B37B03800DD5723 /* RecipesInstructionViewController.swift */; };
 		09ECF5451B3847E5001FC3EF /* VideosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ECF5441B3847E5001FC3EF /* VideosTableViewController.swift */; };
 		09ECF5471B384FF0001FC3EF /* VideosDishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ECF5461B384FF0001FC3EF /* VideosDishTableViewCell.swift */; };
+		09ECF54A1B3961D9001FC3EF /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ECF5491B3961D9001FC3EF /* YTPlayerView.m */; };
+		09ECF54C1B3961EE001FC3EF /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 09ECF54B1B3961EE001FC3EF /* Assets */; };
 		3B0ADD431B29298000692ABE /* Videos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0ADD421B29298000692ABE /* Videos.storyboard */; };
 		3B0ADD451B29299000692ABE /* Recipes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0ADD441B29299000692ABE /* Recipes.storyboard */; };
 		3B0ADD471B29299D00692ABE /* Collections.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0ADD461B29299D00692ABE /* Collections.storyboard */; };
@@ -69,6 +71,9 @@
 		09EADF321B37B03800DD5723 /* RecipesInstructionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesInstructionViewController.swift; sourceTree = "<group>"; };
 		09ECF5441B3847E5001FC3EF /* VideosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideosTableViewController.swift; sourceTree = "<group>"; };
 		09ECF5461B384FF0001FC3EF /* VideosDishTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideosDishTableViewCell.swift; sourceTree = "<group>"; };
+		09ECF5481B3961D9001FC3EF /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
+		09ECF5491B3961D9001FC3EF /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
+		09ECF54B1B3961EE001FC3EF /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
 		3B0ADD421B29298000692ABE /* Videos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Videos.storyboard; sourceTree = "<group>"; };
 		3B0ADD441B29299000692ABE /* Recipes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recipes.storyboard; sourceTree = "<group>"; };
 		3B0ADD461B29299D00692ABE /* Collections.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Collections.storyboard; sourceTree = "<group>"; };
@@ -264,6 +269,9 @@
 		3B5A41C21B248BBB00EBD78E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				09ECF54B1B3961EE001FC3EF /* Assets */,
+				09ECF5481B3961D9001FC3EF /* YTPlayerView.h */,
+				09ECF5491B3961D9001FC3EF /* YTPlayerView.m */,
 				3B5A41CB1B248BBB00EBD78E /* Images.xcassets */,
 				3B5A41CD1B248BBB00EBD78E /* LaunchScreen.xib */,
 				3B5A41C41B248BBB00EBD78E /* AppDelegate.swift */,
@@ -371,6 +379,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09ECF54C1B3961EE001FC3EF /* Assets in Resources */,
 				3B5A41E71B248C5400EBD78E /* Cartfile in Resources */,
 				3B9339061B24A3AB000C7AAC /* Main.storyboard in Resources */,
 				3B0ADD491B2929A900692ABE /* QandA.storyboard in Resources */,
@@ -433,6 +442,7 @@
 				09EADF2F1B378F5500DD5723 /* RecipesDishDetailTabBarController.swift in Sources */,
 				3B0ADD511B292E5300692ABE /* ShowInfoViewController.swift in Sources */,
 				3B1FDEB41B370AC100A41EE4 /* ShowInfoTabBarViewController.swift in Sources */,
+				09ECF54A1B3961D9001FC3EF /* YTPlayerView.m in Sources */,
 				0997B6041B32C664000534BE /* RecipesDishTableViewCell.swift in Sources */,
 				09EADF331B37B03800DD5723 /* RecipesInstructionViewController.swift in Sources */,
 				3B0ADD4F1B292E4600692ABE /* VideosViewController.swift in Sources */,
