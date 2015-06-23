@@ -35,9 +35,11 @@ public class DateDistance {
             return timeLong + "周前";
         }
         else {
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            sdf.setTimeZone(TimeZone.getTimeZone("GMT+08:00"));
-            return sdf.format(startDate);
+            timeLong = timeLong/1000/ 60 / 60 / 24/7;
+            return timeLong + "周前";
+//            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//            sdf.setTimeZone(TimeZone.getTimeZone("GMT+08:00"));
+//            return sdf.format(startDate);
         }
     }
 }
