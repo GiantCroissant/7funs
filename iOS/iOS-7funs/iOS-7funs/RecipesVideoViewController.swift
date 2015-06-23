@@ -12,9 +12,8 @@ class RecipesVideoViewController: UIViewController {
     
     var dishDetail: DishDetail!
     
-    var player : XCDYouTubeVideoPlayerViewController = XCDYouTubeVideoPlayerViewController(videoIdentifier: "lDcqxj2Xsy4")
+    @IBOutlet weak var playerView: YTPlayerView!
 
-    @IBOutlet weak var currentVideo: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,69 +22,41 @@ class RecipesVideoViewController: UIViewController {
         // Hard code the youtube id here for testing, later should be replaced with
         // ids passing along from table view
         
-        println(dishDetail.video1)
-        println(dishDetail.video2)
-        println(dishDetail.video3)
-        println(dishDetail.video4)
-        player = XCDYouTubeVideoPlayerViewController(videoIdentifier: dishDetail.video1)
-        player.presentInView(currentVideo)
-        player.moviePlayer.initialPlaybackTime = 100
-        player.moviePlayer.shouldAutoplay = false
-        player.moviePlayer.prepareToPlay()
-        player.moviePlayer.play()
+        //println(dishDetail.video1)
+        //println(dishDetail.video2)
+        //println(dishDetail.video3)
+        //println(dishDetail.video4)
+        
+        let setting = ["playsinline" : 1]
+        playerView.loadWithVideoId(dishDetail.video1, playerVars: setting)
     }
 
     @IBAction func changeToView1(sender: AnyObject) {
-        let playedTime = player.moviePlayer.currentPlaybackTime
+        let playedTime = playerView.currentTime()
         println(playedTime)
-        player.moviePlayer.stop()
-        
-        // Should refactory the code later
-        player = XCDYouTubeVideoPlayerViewController(videoIdentifier: dishDetail.video1)
-        player.presentInView(currentVideo)
-        player.moviePlayer.initialPlaybackTime = playedTime
-        player.moviePlayer.shouldAutoplay = false
-        player.moviePlayer.prepareToPlay()
-        player.moviePlayer.play()
+        playerView.cueVideoById(dishDetail.video1, startSeconds: playedTime, suggestedQuality: YTPlaybackQuality.Auto)
+        playerView.playVideo()
     }
     
     @IBAction func changeToView2(sender: AnyObject) {
-        let playedTime = player.moviePlayer.currentPlaybackTime
+        let playedTime = playerView.currentTime()
         println(playedTime)
-        player.moviePlayer.stop()
-
-        player = XCDYouTubeVideoPlayerViewController(videoIdentifier: dishDetail.video2)
-        player.presentInView(currentVideo)
-        player.moviePlayer.initialPlaybackTime = playedTime
-        player.moviePlayer.shouldAutoplay = false
-        player.moviePlayer.prepareToPlay()
-        player.moviePlayer.play()
+        playerView.cueVideoById(dishDetail.video2, startSeconds: playedTime, suggestedQuality: YTPlaybackQuality.Auto)
+        playerView.playVideo()
     }
     
     @IBAction func changeToView3(sender: AnyObject) {
-        let playedTime = player.moviePlayer.currentPlaybackTime
+        let playedTime = playerView.currentTime()
         println(playedTime)
-        player.moviePlayer.stop()
-        
-        player = XCDYouTubeVideoPlayerViewController(videoIdentifier: dishDetail.video3)
-        player.presentInView(currentVideo)
-        player.moviePlayer.initialPlaybackTime = playedTime
-        player.moviePlayer.shouldAutoplay = false
-        player.moviePlayer.prepareToPlay()
-        player.moviePlayer.play()
+        playerView.cueVideoById(dishDetail.video3, startSeconds: playedTime, suggestedQuality: YTPlaybackQuality.Auto)
+        playerView.playVideo()
     }
     
     @IBAction func changeToView4(sender: AnyObject) {
-        let playedTime = player.moviePlayer.currentPlaybackTime
+        let playedTime = playerView.currentTime()
         println(playedTime)
-        player.moviePlayer.stop()
-        
-        player = XCDYouTubeVideoPlayerViewController(videoIdentifier: dishDetail.video4)
-        player.presentInView(currentVideo)
-        player.moviePlayer.initialPlaybackTime = playedTime
-        player.moviePlayer.shouldAutoplay = false
-        player.moviePlayer.prepareToPlay()
-        player.moviePlayer.play()
+        playerView.cueVideoById(dishDetail.video4, startSeconds: playedTime, suggestedQuality: YTPlaybackQuality.Auto)
+        playerView.playVideo()
     }
     
     override func didReceiveMemoryWarning() {
