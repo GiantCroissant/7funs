@@ -142,7 +142,7 @@ public class ResponseActivity extends ActionBarActivity {
             newQuestion.setCreateTime(questionRealm.getCreateTime());
 
             for (ResponseRealm responseRealm : questionRealm.getResponses()) {
-                ResponseOfQuestion newResponse = new ResponseOfQuestion(responseRealm.getId(),responseRealm.getContent(),responseRealm.getOwnerName(),responseRealm.getOwnerIconUrl(),question);
+                ResponseOfQuestion newResponse = new ResponseOfQuestion(responseRealm.getId(),responseRealm.getContent(),responseRealm.getOwnerName(),responseRealm.getOwnerIconUrl(),question, responseRealm.getCreateTime());
                 newQuestion.addResponse(newResponse);
             }
 
