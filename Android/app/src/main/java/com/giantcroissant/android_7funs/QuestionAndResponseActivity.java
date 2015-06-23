@@ -78,8 +78,8 @@ public class QuestionAndResponseActivity extends ActionBarActivity {
         questionList = new ArrayList<Question>();
         questionList.add(new Question(UUID.randomUUID().toString(), "關於Android Tutorial的事情.", "Hello content", "Gina_12345", "xxx"));
         questionList.add(new Question(UUID.randomUUID().toString(), "一隻非常可愛的小狗狗!", "她的名字叫「大熱狗」，又叫作「奶嘴」，是一隻非常可愛的小狗。", "Gina_12345", "xxx"));
-        questionList.get(0).addResponse(new ResponseOfQuestion(UUID.randomUUID().toString(), "我比較喜歡貓", "Gina_12345", "xxx", questionList.get(0)));
-        questionList.get(1).addResponse(new ResponseOfQuestion(UUID.randomUUID().toString(), "我肚子餓", "Gina_12345", "xxx", questionList.get(0)));
+        questionList.get(0).addResponse(new ResponseOfQuestion(UUID.randomUUID().toString(), "我比較喜歡貓", "Gina_12345", "xxx", questionList.get(0) ,questionList.get(0).getCreateTime()));
+        questionList.get(1).addResponse(new ResponseOfQuestion(UUID.randomUUID().toString(), "我肚子餓", "Gina_12345", "xxx", questionList.get(1), questionList.get(1).getCreateTime()));
 
         for (Question question : questionList) {
             realm.beginTransaction();

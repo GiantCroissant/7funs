@@ -27,6 +27,16 @@ public class ResponseOfQuestion {
     }
 
 
+    public ResponseOfQuestion(String id,String content, String ownerName, String ownerIconUrl,Question question, Date createTime) {
+        this.id = id;
+        this.content = content;
+        this.ownerName = ownerName;
+        this.ownerIconUrl = ownerIconUrl;
+        this.createTime = createTime;
+        this.question = question;
+    }
+
+
     public String getId() {
         return id;
     }
