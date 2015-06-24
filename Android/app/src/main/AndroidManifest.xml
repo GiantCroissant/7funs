@@ -37,16 +37,16 @@
             android:label="@string/title_activity_show" >
         </activity>
         <activity
-            android:name=".CookInfoActivity"
-            android:label="@string/title_activity_cook" >
-        </activity>
-        <activity
             android:name=".VideoListActivity"
             android:label="@string/title_activity_video_list" >
         </activity>
         <activity
             android:name=".CookBookActivity"
             android:label="@string/title_activity_cook_book" >
+        </activity>
+        <activity
+            android:name=".CooksInfoActivity"
+            android:label="@string/title_activity_show_and_cook" >
         </activity>
     </application>
 

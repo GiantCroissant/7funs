@@ -55,6 +55,7 @@
 		3B5A41E51B248BCA00EBD78E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 3B5A41E41B248BCA00EBD78E /* .gitignore */; };
 		3B5A41E71B248C5400EBD78E /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 3B5A41E61B248C5400EBD78E /* Cartfile */; };
 		3B91D8451B3A79780077C686 /* TeacherInfoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B91D8441B3A79780077C686 /* TeacherInfoPageViewController.swift */; };
+		3B91D8471B3A8FF20077C686 /* TeacherInfoContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B91D8461B3A8FF20077C686 /* TeacherInfoContentViewController.swift */; };
 		3B9338FE1B24A1D0000C7AAC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9338FD1B24A1D0000C7AAC /* MainViewController.swift */; };
 		3B9339001B24A1E4000C7AAC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9338FF1B24A1E4000C7AAC /* SecondViewController.swift */; };
 		3B9339061B24A3AB000C7AAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B9339051B24A3AB000C7AAC /* Main.storyboard */; };
@@ -125,6 +126,7 @@
 		3B5A41E41B248BCA00EBD78E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		3B5A41E61B248C5400EBD78E /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		3B91D8441B3A79780077C686 /* TeacherInfoPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherInfoPageViewController.swift; sourceTree = "<group>"; };
+		3B91D8461B3A8FF20077C686 /* TeacherInfoContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherInfoContentViewController.swift; sourceTree = "<group>"; };
 		3B9338FD1B24A1D0000C7AAC /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3B9338FF1B24A1E4000C7AAC /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		3B9339051B24A3AB000C7AAC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				3B1FDEB31B370AC100A41EE4 /* ShowInfoTabBarViewController.swift */,
 				3B1FDEB51B370BC200A41EE4 /* TeacherInfoViewController.swift */,
 				3B91D8441B3A79780077C686 /* TeacherInfoPageViewController.swift */,
+				3B91D8461B3A8FF20077C686 /* TeacherInfoContentViewController.swift */,
 			);
 			name = "Show Info";
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				09E19BCE1B3A9F0C00C088A6 /* QuestionTableViewCell.swift in Sources */,
 				3B0ADD511B292E5300692ABE /* ShowInfoViewController.swift in Sources */,
 				3B1FDEB41B370AC100A41EE4 /* ShowInfoTabBarViewController.swift in Sources */,
+				3B91D8471B3A8FF20077C686 /* TeacherInfoContentViewController.swift in Sources */,
 				09ECF54A1B3961D9001FC3EF /* YTPlayerView.m in Sources */,
 				0997B6041B32C664000534BE /* RecipesDishTableViewCell.swift in Sources */,
 				09EADF331B37B03800DD5723 /* RecipesInstructionViewController.swift in Sources */,

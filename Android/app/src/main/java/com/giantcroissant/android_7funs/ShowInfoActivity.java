@@ -68,7 +68,7 @@ public class ShowInfoActivity extends ActionBarActivity {
 
         if (view.getId() == R.id.cook_info_button) {
 
-            Intent i = new Intent(ShowInfoActivity.this, CookInfoActivity.class);
+            Intent i = new Intent(ShowInfoActivity.this, CooksInfoActivity.class);
             startActivity(i);
             finish();
 
