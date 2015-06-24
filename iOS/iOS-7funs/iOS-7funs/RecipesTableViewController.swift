@@ -32,15 +32,12 @@ class RecipesTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        println("table view did load")
-        
         let connected = Reachability.isConnectedToNetwork()
         if connected {
             // Get the data from remote
             println("has internet connection")
             fetchDataFromRemote()
         }
-        
     }
     
     func fetchDataFromRemote() {

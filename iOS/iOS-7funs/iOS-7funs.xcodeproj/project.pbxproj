@@ -8,10 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		0960DE831B3A808500149484 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960DE821B3A808500149484 /* NetworkReachability.swift */; };
+		0960DE871B3A94F300149484 /* QandATableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960DE861B3A94F300149484 /* QandATableViewController.swift */; };
+		0960DE891B3A98AA00149484 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960DE881B3A98AA00149484 /* Question.swift */; };
 		0997B6001B32C442000534BE /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0997B5FF1B32C442000534BE /* Dish.swift */; };
 		0997B6021B32C4E7000534BE /* RecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0997B6011B32C4E7000534BE /* RecipesTableViewController.swift */; };
 		0997B6041B32C664000534BE /* RecipesDishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0997B6031B32C664000534BE /* RecipesDishTableViewCell.swift */; };
 		0997B6071B3672F6000534BE /* RecipesVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0997B6061B3672F6000534BE /* RecipesVideoViewController.swift */; };
+		09E19BCC1B3A9D0B00C088A6 /* QuestionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E19BCB1B3A9D0B00C088A6 /* QuestionResponse.swift */; };
+		09E19BCE1B3A9F0C00C088A6 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E19BCD1B3A9F0C00C088A6 /* QuestionTableViewCell.swift */; };
+		09E19BD01B3AA92700C088A6 /* QandAResponseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E19BCF1B3AA92700C088A6 /* QandAResponseTableViewController.swift */; };
+		09E19BD21B3AAB6500C088A6 /* QuestionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E19BD11B3AAB6500C088A6 /* QuestionDetail.swift */; };
+		09E19BD41B3AAC0200C088A6 /* QuestionResponseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E19BD31B3AAC0200C088A6 /* QuestionResponseDetail.swift */; };
+		09E19BD61B3AB26400C088A6 /* QuestionResponseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E19BD51B3AB26400C088A6 /* QuestionResponseTableViewCell.swift */; };
 		09EADF2F1B378F5500DD5723 /* RecipesDishDetailTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EADF2E1B378F5500DD5723 /* RecipesDishDetailTabBarController.swift */; };
 		09EADF311B378F7300DD5723 /* DishDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EADF301B378F7300DD5723 /* DishDetail.swift */; };
 		09EADF331B37B03800DD5723 /* RecipesInstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EADF321B37B03800DD5723 /* RecipesInstructionViewController.swift */; };
@@ -64,11 +72,19 @@
 
 /* Begin PBXFileReference section */
 		0960DE821B3A808500149484 /* NetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
+		0960DE861B3A94F300149484 /* QandATableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QandATableViewController.swift; sourceTree = "<group>"; };
+		0960DE881B3A98AA00149484 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		0997B5FF1B32C442000534BE /* Dish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
 		0997B6011B32C4E7000534BE /* RecipesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesTableViewController.swift; sourceTree = "<group>"; };
 		0997B6031B32C664000534BE /* RecipesDishTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesDishTableViewCell.swift; sourceTree = "<group>"; };
 		0997B6061B3672F6000534BE /* RecipesVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesVideoViewController.swift; sourceTree = "<group>"; };
 		0997B6081B36749D000534BE /* iOS-7funs-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS-7funs-Bridging-Header.h"; sourceTree = "<group>"; };
+		09E19BCB1B3A9D0B00C088A6 /* QuestionResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionResponse.swift; sourceTree = "<group>"; };
+		09E19BCD1B3A9F0C00C088A6 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		09E19BCF1B3AA92700C088A6 /* QandAResponseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QandAResponseTableViewController.swift; sourceTree = "<group>"; };
+		09E19BD11B3AAB6500C088A6 /* QuestionDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDetail.swift; sourceTree = "<group>"; };
+		09E19BD31B3AAC0200C088A6 /* QuestionResponseDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionResponseDetail.swift; sourceTree = "<group>"; };
+		09E19BD51B3AB26400C088A6 /* QuestionResponseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionResponseTableViewCell.swift; sourceTree = "<group>"; };
 		09EADF2E1B378F5500DD5723 /* RecipesDishDetailTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesDishDetailTabBarController.swift; sourceTree = "<group>"; };
 		09EADF301B378F7300DD5723 /* DishDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DishDetail.swift; sourceTree = "<group>"; };
 		09EADF321B37B03800DD5723 /* RecipesInstructionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesInstructionViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				0997B5FF1B32C442000534BE /* Dish.swift */,
+				0960DE881B3A98AA00149484 /* Question.swift */,
+				09E19BCB1B3A9D0B00C088A6 /* QuestionResponse.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -185,6 +203,12 @@
 			children = (
 				3B0ADD481B2929A900692ABE /* QandA.storyboard */,
 				3B0ADD561B292E6D00692ABE /* QandAViewController.swift */,
+				0960DE861B3A94F300149484 /* QandATableViewController.swift */,
+				09E19BCD1B3A9F0C00C088A6 /* QuestionTableViewCell.swift */,
+				09E19BCF1B3AA92700C088A6 /* QandAResponseTableViewController.swift */,
+				09E19BD11B3AAB6500C088A6 /* QuestionDetail.swift */,
+				09E19BD31B3AAC0200C088A6 /* QuestionResponseDetail.swift */,
+				09E19BD51B3AB26400C088A6 /* QuestionResponseTableViewCell.swift */,
 			);
 			name = QandA;
 			sourceTree = "<group>";
@@ -444,9 +468,15 @@
 				0997B6001B32C442000534BE /* Dish.swift in Sources */,
 				3B0ADD551B292E6500692ABE /* CollectionsViewController.swift in Sources */,
 				3B0ADD5B1B292E8300692ABE /* ScratchcardViewController.swift in Sources */,
+				09E19BD61B3AB26400C088A6 /* QuestionResponseTableViewCell.swift in Sources */,
 				3B9339001B24A1E4000C7AAC /* SecondViewController.swift in Sources */,
+				09E19BCC1B3A9D0B00C088A6 /* QuestionResponse.swift in Sources */,
+				09E19BD01B3AA92700C088A6 /* QandAResponseTableViewController.swift in Sources */,
+				09E19BD41B3AAC0200C088A6 /* QuestionResponseDetail.swift in Sources */,
 				3B5A41C51B248BBB00EBD78E /* AppDelegate.swift in Sources */,
 				09EADF2F1B378F5500DD5723 /* RecipesDishDetailTabBarController.swift in Sources */,
+				0960DE871B3A94F300149484 /* QandATableViewController.swift in Sources */,
+				09E19BCE1B3A9F0C00C088A6 /* QuestionTableViewCell.swift in Sources */,
 				3B0ADD511B292E5300692ABE /* ShowInfoViewController.swift in Sources */,
 				3B1FDEB41B370AC100A41EE4 /* ShowInfoTabBarViewController.swift in Sources */,
 				09ECF54A1B3961D9001FC3EF /* YTPlayerView.m in Sources */,
@@ -456,6 +486,8 @@
 				09ECF5451B3847E5001FC3EF /* VideosTableViewController.swift in Sources */,
 				3B0ADD531B292E5C00692ABE /* RecipesViewController.swift in Sources */,
 				09ECF5471B384FF0001FC3EF /* VideosDishTableViewCell.swift in Sources */,
+				09E19BD21B3AAB6500C088A6 /* QuestionDetail.swift in Sources */,
+				0960DE891B3A98AA00149484 /* Question.swift in Sources */,
 				0997B6021B32C4E7000534BE /* RecipesTableViewController.swift in Sources */,
 				3B91D8451B3A79780077C686 /* TeacherInfoPageViewController.swift in Sources */,
 				09EADF311B378F7300DD5723 /* DishDetail.swift in Sources */,
