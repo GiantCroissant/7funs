@@ -35,10 +35,10 @@
                                 <exclude reference="xYa-jt-Daj"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="hif-Ss-0E3"/>
                                 <exclude reference="NPb-XO-Bph"/>
                                 <exclude reference="Q4e-qr-qsz"/>
                                 <exclude reference="h64-V9-gk1"/>
-                                <exclude reference="hif-Ss-0E3"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -46,10 +46,10 @@
                                 <include reference="xYa-jt-Daj"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="hif-Ss-0E3"/>
                                 <include reference="NPb-XO-Bph"/>
                                 <include reference="Q4e-qr-qsz"/>
                                 <include reference="h64-V9-gk1"/>
-                                <include reference="hif-Ss-0E3"/>
                             </mask>
                         </variation>
                     </view>
@@ -99,13 +99,13 @@
             </objects>
             <point key="canvasLocation" x="759" y="-60.75"/>
         </scene>
-        <!--Page View Controller-->
+        <!--Teacher Info Page View Controller-->
         <scene sceneID="VsU-qS-bEt">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="eVc-Hg-cLR" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="eVc-Hg-cLR" customClass="TeacherInfoPageViewController" customModule="iOS_7funs" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R0E-Ue-Ye5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2610" y="263.25"/>
+            <point key="canvasLocation" x="2514" y="262.875"/>
         </scene>
     </scenes>
 </document>
