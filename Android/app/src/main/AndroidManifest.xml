@@ -37,10 +37,6 @@
             android:label="@string/title_activity_show" >
         </activity>
         <activity
-            android:name=".CookInfoActivity"
-            android:label="@string/title_activity_cook" >
-        </activity>
-        <activity
             android:name=".VideoListActivity"
             android:label="@string/title_activity_video_list" >
         </activity>
