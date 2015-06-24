@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0960DE831B3A808500149484 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960DE821B3A808500149484 /* NetworkReachability.swift */; };
 		0997B6001B32C442000534BE /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0997B5FF1B32C442000534BE /* Dish.swift */; };
 		0997B6021B32C4E7000534BE /* RecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0997B6011B32C4E7000534BE /* RecipesTableViewController.swift */; };
 		0997B6041B32C664000534BE /* RecipesDishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0997B6031B32C664000534BE /* RecipesDishTableViewCell.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0960DE821B3A808500149484 /* NetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		0997B5FF1B32C442000534BE /* Dish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
 		0997B6011B32C4E7000534BE /* RecipesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesTableViewController.swift; sourceTree = "<group>"; };
 		0997B6031B32C664000534BE /* RecipesDishTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesDishTableViewCell.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 				3B5A41C41B248BBB00EBD78E /* AppDelegate.swift */,
 				3B5A41C31B248BBB00EBD78E /* Info.plist */,
 				0997B6081B36749D000534BE /* iOS-7funs-Bridging-Header.h */,
+				0960DE821B3A808500149484 /* NetworkReachability.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0960DE831B3A808500149484 /* NetworkReachability.swift in Sources */,
 				0997B6071B3672F6000534BE /* RecipesVideoViewController.swift in Sources */,
 				3B1FDEB61B370BC200A41EE4 /* TeacherInfoViewController.swift in Sources */,
 				3B0ADD571B292E6D00692ABE /* QandAViewController.swift in Sources */,
