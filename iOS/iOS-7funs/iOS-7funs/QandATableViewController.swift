@@ -17,6 +17,14 @@ class QandATableViewController: UITableViewController {
     
     var questions = Realm().objects(Question)
 
+    override func viewWillAppear(animated: Bool) {
+        hideNavigarionBar()
+    }
+
+    func hideNavigarionBar() {
+        self.navigationController?.navigationBarHidden = false
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

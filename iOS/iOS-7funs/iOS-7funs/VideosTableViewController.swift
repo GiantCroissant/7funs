@@ -16,7 +16,15 @@ import RealmSwift
 class VideosTableViewController: UITableViewController {
     
     var dishes = Realm().objects(Dish)
-    
+
+    override func viewWillAppear(animated: Bool) {
+        hideNavigarionBar()
+    }
+
+    func hideNavigarionBar() {
+        self.navigationController?.navigationBarHidden = false
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
