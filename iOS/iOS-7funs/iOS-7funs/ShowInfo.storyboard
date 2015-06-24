@@ -102,10 +102,57 @@
         <!--Teacher Info Page View Controller-->
         <scene sceneID="VsU-qS-bEt">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="eVc-Hg-cLR" customClass="TeacherInfoPageViewController" customModule="iOS_7funs" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="eVc-Hg-cLR" customClass="TeacherInfoPageViewController" customModule="iOS_7funs" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R0E-Ue-Ye5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2514" y="262.875"/>
+        </scene>
+        <!--Teacher Info Content View Controller-->
+        <scene sceneID="Mgb-QB-WWs">
+            <objects>
+                <viewController storyboardIdentifier="TeacherInfoContentViewController" id="qBZ-De-5A0" customClass="TeacherInfoContentViewController" customModule="iOS_7funs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d6J-kD-WsM"/>
+                        <viewControllerLayoutGuide type="bottom" id="DlT-wJ-7xP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ek4-SA-KyV">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTP-ei-Spc">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="PTP-ei-Spc" secondAttribute="centerX" id="EvW-fL-xFT"/>
+                            <constraint firstAttribute="centerY" secondItem="PTP-ei-Spc" secondAttribute="centerY" constant="0.5" id="g59-V1-TYT"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="PTP-ei-Spc"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="EvW-fL-xFT"/>
+                                <exclude reference="g59-V1-TYT"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="PTP-ei-Spc"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="EvW-fL-xFT"/>
+                                <include reference="g59-V1-TYT"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PFD-Ly-gwz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3282" y="281.25"/>
         </scene>
     </scenes>
 </document>
