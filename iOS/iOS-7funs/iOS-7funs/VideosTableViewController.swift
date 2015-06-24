@@ -8,6 +8,9 @@
 
 import UIKit
 
+import Alamofire
+import SwiftyJSON
+
 import RealmSwift
 
 class VideosTableViewController: UITableViewController {
@@ -51,6 +54,7 @@ class VideosTableViewController: UITableViewController {
         
         let dish = dishes[indexPath.row]
         cell.dishName.text = dish.name
+        cell.duration.text = "20:22"
 
         let dirPaths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         
