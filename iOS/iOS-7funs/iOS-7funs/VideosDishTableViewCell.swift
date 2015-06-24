@@ -14,6 +14,7 @@ class VideosDishTableViewCell: UITableViewCell {
     
     @IBOutlet weak var dishName: UILabel!
     
+    @IBOutlet weak var duration: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
