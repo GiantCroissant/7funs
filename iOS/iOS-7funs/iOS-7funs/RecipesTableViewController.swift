@@ -61,32 +61,55 @@ class RecipesTableViewController: UITableViewController {
                 autoreleasepool {
                     let realm = Realm()
                     
-                    // This cleans all the data, a bit too destructrive
-                    realm.write {
-                        realm.deleteAll()
+                    let currentDishes = Realm().objects(Dish)
+                    
+                    var newDishJsons = [JSON]()
+                    // Compare what in database and fetched from remote, if remote is not in
+                    // local, add to the array for later adding
+                    for (key, subJson) in json["results"] {
+                        let dishId = subJson["objectId"].string!
+                        var had = false
+                        
+                        for dish in currentDishes {
+                            if dish.id == dishId {
+                                had = true
+                            }
+                        }
+                        if had == false {
+                            newDishJsons.append(subJson)
+                        }
                     }
                     
-                    realm.beginWrite()
-                    //
-                    for (key, subJson) in json["results"] {
-                        let dish = Dish()
+                    // This cleans all the data, a bit too destructrive
+                    //realm.write {
+                    //    realm.deleteAll()
+                    //}
+                    
+                    println(newDishJsons.count)
+                    
+                    if newDishJsons.count > 0 {
+                        realm.beginWrite()
+                        for dishJson in newDishJsons {
+                            let dish = Dish()
+                            
+                            dish.id = dishJson["objectId"].string!
+                            dish.cook = dishJson["cook"].string!
+                            dish.name = dishJson["name"].string!
+                            dish.viewedCount = dishJson["viewedCount"].int!
+                            dish.collectedCount = dishJson["collectedCount"].int!
+                            // Just write down the name here, when later retrieving file, check if file exists or not
+                            dish.image = dishJson["image"]["name"].string!
+                            
+                            dish.video1 = dishJson["video1"].string!
+                            dish.video2 = dishJson["video2"].string!
+                            dish.video3 = dishJson["video3"].string!
+                            dish.video4 = dishJson["video4"].string!
+                            
+                            realm.add(dish, update: true)
+                        }
                         
-                        dish.id = subJson["objectId"].string!
-                        dish.cook = subJson["cook"].string!
-                        dish.name = subJson["name"].string!
-                        dish.viewedCount = subJson["viewedCount"].int!
-                        dish.collectedCount = subJson["collectedCount"].int!
-                        // Just write down the name here, when later retrieving file, check if file exists or not
-                        dish.image = subJson["image"]["name"].string!
-                        
-                        dish.video1 = subJson["video1"].string!
-                        dish.video2 = subJson["video2"].string!
-                        dish.video3 = subJson["video3"].string!
-                        dish.video4 = subJson["video4"].string!
-                        
-                        realm.add(dish, update: true)
+                        realm.commitWrite()
                     }
-                    realm.commitWrite()
                 }
             }
             
