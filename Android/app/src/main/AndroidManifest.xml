@@ -48,6 +48,10 @@
             android:name=".CookBookActivity"
             android:label="@string/title_activity_cook_book" >
         </activity>
+        <activity
+            android:name=".CooksInfoActivity"
+            android:label="@string/title_activity_show_and_cook" >
+        </activity>
     </application>
 
 </manifest>
