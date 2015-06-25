@@ -4,14 +4,14 @@
     android:gravity="start"
     android:orientation="vertical"
     android:clickable="false"
-    android:background="@color/White"
-    android:nestedScrollingEnabled="false">
+    android:background="@color/White">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="#ff777777">
+        android:background="#ff777777"
+        android:clickable="false">
 
         <ImageView
             android:layout_width="match_parent"
@@ -23,8 +23,7 @@
             android:layout_alignParentStart="true"
             android:layout_weight="1"
             android:background="#00ffffff"
-            android:clickable="false"
-            android:nestedScrollingEnabled="false" />
+            android:clickable="false"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -56,16 +55,14 @@
         android:layout_alignTop="@+id/video_short_image"
         android:layout_alignBottom="@+id/video_short_image"
         android:layout_weight="3"
-        android:clickable="false"
-        android:nestedScrollingEnabled="false">
+        android:clickable="false">
 
         <RelativeLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="2.5"
-            android:clickable="false"
-            android:nestedScrollingEnabled="false">
+            android:clickable="false">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -80,7 +77,7 @@
                 android:nestedScrollingEnabled="false"
                 android:paddingTop="15dp"
                 android:paddingBottom="15dp"
-                android:layout_marginLeft="20dp" />
+                android:layout_marginLeft="10dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -89,13 +86,12 @@
                 android:text="5"
                 android:textColor="#ff9a9a9a"
                 android:id="@+id/collected_count_text"
-                android:textSize="20dp"
+                android:textSize="16dp"
                 android:layout_weight="1"
                 android:background="#ffffffff"
                 android:textAlignment="center"
                 android:gravity="center_vertical|left"
                 android:clickable="false"
-                android:nestedScrollingEnabled="false"
                 android:layout_toRightOf="@+id/collected_icon" />
 
             <TextView
@@ -105,13 +101,12 @@
                 android:text="人收藏 · "
                 android:textColor="#ff9a9a9a"
                 android:id="@+id/textView4"
-                android:textSize="20dp"
+                android:textSize="16dp"
                 android:layout_weight="1"
                 android:background="#ffffffff"
                 android:textAlignment="center"
                 android:gravity="center_vertical|left"
                 android:clickable="false"
-                android:nestedScrollingEnabled="false"
                 android:layout_toRightOf="@+id/collected_count_text" />
 
             <TextView
@@ -121,14 +116,13 @@
                 android:text="999"
                 android:textColor="#ff9a9a9a"
                 android:id="@+id/cook_book_view_count_text"
-                android:textSize="20dp"
+                android:textSize="16dp"
                 android:layout_toRightOf="@+id/textView4"
                 android:layout_alignParentRight="false"
                 android:layout_alignParentEnd="false"
                 android:layout_weight="1"
                 android:background="#ffffffff"
                 android:clickable="false"
-                android:nestedScrollingEnabled="false"
                 android:gravity="center_vertical|left" />
 
             <TextView
@@ -138,25 +132,29 @@
                 android:text="人看過"
                 android:textColor="#ff9a9a9a"
                 android:id="@+id/textView5"
-                android:textSize="20dp"
+                android:textSize="16dp"
                 android:layout_toRightOf="@+id/cook_book_view_count_text"
                 android:layout_alignParentRight="false"
                 android:layout_alignParentEnd="false"
                 android:layout_weight="1"
                 android:background="#ffffffff"
                 android:clickable="false"
-                android:nestedScrollingEnabled="false"
                 android:gravity="center_vertical|left" />
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/collect_cook_book_Button"
-                android:layout_alignParentEnd="true"
                 android:src="@drawable/heart_outline"
                 android:scaleType="fitCenter"
                 android:background="@color/White"
-                android:layout_marginRight="20dp" />
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:onClick="onClick" />
 
         </RelativeLayout>
 

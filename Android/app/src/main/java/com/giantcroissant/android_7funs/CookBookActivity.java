@@ -1,8 +1,11 @@
 package com.giantcroissant.android_7funs;
 
+import android.content.Intent;
+import android.os.Debug;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -42,8 +45,8 @@ public class CookBookActivity extends ActionBarActivity {
     private void createFakeData()
     {
         cookBookList = new ArrayList<CookBook>();
-        cookBookList.add(new CookBook(UUID.randomUUID().toString(), "三色嫩煎鱈魚-白家豪師傅", "CH37東風電視台＿料理美食", "Http://xd.com", "Http://xd.com", 9999, 9999,false));
-        cookBookList.add(new CookBook(UUID.randomUUID().toString(), "三色嫩煎鮭魚-白家豪師傅", "CH37東風電視台＿料理美食", "Http://xd.com", "Http://xd.com", 9999, 9999,false));
+        cookBookList.add(new CookBook(UUID.randomUUID().toString(), "三色嫩煎鱈魚-白家豪師傅", "CH37東風電視台＿料理美食", "Http://xd.com", "Http://xd.com", 9999, 9999, false));
+        cookBookList.add(new CookBook(UUID.randomUUID().toString(), "三色嫩煎鮭魚-白家豪師傅", "CH37東風電視台＿料理美食", "Http://xd.com", "Http://xd.com", 9999, 9999, false));
     }
 
     private void getView()
@@ -101,19 +104,38 @@ public class CookBookActivity extends ActionBarActivity {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                if (view.getId() == R.id.collect_cook_book_Button) {
+//                    cookBookList.get(position).setIsCollected(!cookBookList.get(position).getIsCollected());
+//                    cookBookListAdapter = new CookBookListAdapter(CookBookActivity.this, R.layout.cook_book_list_item, cookBookList);
+//                    cookBookListView.setAdapter(cookBookListAdapter);
+//
+//                    Log.e("Click", "Good");
+//                }
+                Intent intent = new Intent(CookBookActivity.this, MainActivity.class);
 
-//                Intent intent = new Intent(QuestionAndResponseActivity.this, ResponseActivity.class);
-//
-//                intent.putExtra("position", position);
-//                intent.putExtra("questionID", questionList.get(position).getId());
-//
-//                startActivityForResult(intent, 0);
+                startActivityForResult(intent, 0);
             }
 
         });
 
         toolbar.setOnMenuItemClickListener(menuItemListener);
         toolbar.setNavigationOnClickListener(navigationListener);
+    }
+
+    public void onClick(View view) {
+        if (view.getId() == R.id.collect_cook_book_Button) {
+            View parentRow = (View) view.getParent();
+            parentRow = (View) parentRow.getParent();
+            parentRow = (View) parentRow.getParent();
+            parentRow = (View) parentRow.getParent();
+            ListView listView = (ListView) parentRow.getParent();
+            final int position = listView.getPositionForView(parentRow);
+        Log.d("XX",String.valueOf(position));
+            cookBookList.get(position).setIsCollected(!cookBookList.get(position).getIsCollected());
+            cookBookListAdapter = new CookBookListAdapter(CookBookActivity.this, R.layout.cook_book_list_item, cookBookList);
+            cookBookListView.setAdapter(cookBookListAdapter);
+        }
+
     }
 
     @Override
