@@ -195,7 +195,8 @@
         <scene sceneID="uhl-XJ-hpc">
             <objects>
                 <tabBarController id="zb4-bD-dxj" customClass="ShowInfoTabBarViewController" customModule="iOS_7funs" customModuleProvider="target" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Yhz-CU-Ofk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
