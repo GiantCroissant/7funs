@@ -10,12 +10,8 @@ import UIKit
 
 class ShowInfoViewController: UIViewController {
 
-    @IBOutlet weak var barItem: UITabBarItem!
-
     override func viewWillAppear(animated: Bool) {
         changeNaviationBarTitle("節目資訊")
-
-
     }
 
     func changeNaviationBarTitle(title: String) {

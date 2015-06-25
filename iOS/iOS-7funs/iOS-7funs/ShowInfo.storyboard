@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--料理老師-->
+        <!--Teacher Info-->
         <scene sceneID="iHd-TN-qva">
             <objects>
-                <viewController id="lZV-Vo-EiD" customClass="TeacherInfoViewController" customModule="iOS_7funs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Teacher Info" id="lZV-Vo-EiD" customClass="TeacherInfoViewController" customModule="iOS_7funs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QJZ-JE-RiH"/>
                         <viewControllerLayoutGuide type="bottom" id="Us9-nl-i3W"/>
@@ -143,10 +143,10 @@
             </objects>
             <point key="canvasLocation" x="2574" y="674.25"/>
         </scene>
-        <!--節目介紹-->
+        <!--Show Info-->
         <scene sceneID="eMd-Ei-3na">
             <objects>
-                <viewController id="GFf-K1-7qK" customClass="ShowInfoViewController" customModule="iOS_7funs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Show Info" id="GFf-K1-7qK" customClass="ShowInfoViewController" customModule="iOS_7funs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Cdl-QE-RkJ"/>
                         <viewControllerLayoutGuide type="bottom" id="P31-LD-6du"/>
@@ -186,9 +186,6 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="節目介紹" id="bW4-86-hsr"/>
-                    <connections>
-                        <outlet property="barItem" destination="bW4-86-hsr" id="jjj-H1-Z7X"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TxI-yc-yst" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
