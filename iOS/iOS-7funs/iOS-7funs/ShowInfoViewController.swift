@@ -10,17 +10,16 @@ import UIKit
 
 class ShowInfoViewController: UIViewController {
 
+    @IBOutlet weak var barItem: UITabBarItem!
+
     override func viewWillAppear(animated: Bool) {
         changeNaviationBarTitle("節目資訊")
+
+
     }
 
     func changeNaviationBarTitle(title: String) {
         self.navigationController?.navigationBar.topItem?.title = title
     }
 
-
-
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
-    }
 }

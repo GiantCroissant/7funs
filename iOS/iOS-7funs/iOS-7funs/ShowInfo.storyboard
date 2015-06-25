@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--料理老師-->
         <scene sceneID="iHd-TN-qva">
             <objects>
                 <viewController id="lZV-Vo-EiD" customClass="TeacherInfoViewController" customModule="iOS_7funs" customModuleProvider="target" sceneMemberID="viewController">
@@ -134,7 +134,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Eb7-A5-F8w"/>
+                    <tabBarItem key="tabBarItem" title="料理老師" id="Eb7-A5-F8w"/>
                     <connections>
                         <outlet property="teacherCollectionView" destination="u29-dJ-oae" id="9Xa-th-uZn"/>
                     </connections>
@@ -143,7 +143,7 @@
             </objects>
             <point key="canvasLocation" x="2574" y="674.25"/>
         </scene>
-        <!--Item 1-->
+        <!--節目介紹-->
         <scene sceneID="eMd-Ei-3na">
             <objects>
                 <viewController id="GFf-K1-7qK" customClass="ShowInfoViewController" customModule="iOS_7funs" customModuleProvider="target" sceneMemberID="viewController">
@@ -185,7 +185,10 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="bW4-86-hsr"/>
+                    <tabBarItem key="tabBarItem" title="節目介紹" id="bW4-86-hsr"/>
+                    <connections>
+                        <outlet property="barItem" destination="bW4-86-hsr" id="jjj-H1-Z7X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TxI-yc-yst" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
