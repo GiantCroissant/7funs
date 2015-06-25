@@ -96,7 +96,8 @@
                                         <exclude reference="tPH-Xa-5Ow"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular">
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="79" width="600" height="120"/>
                                     <mask key="subviews">
                                         <include reference="FDF-4r-jrA"/>
                                     </mask>
@@ -497,7 +498,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="0.99766583730000002" blue="0.96204682870000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.99215686270000003" green="0.41568627450000001" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.99215686274509807" green="0.41568627450980394" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
