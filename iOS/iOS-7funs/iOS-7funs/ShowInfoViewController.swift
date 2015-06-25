@@ -18,4 +18,9 @@ class ShowInfoViewController: UIViewController {
         self.navigationController?.navigationBar.topItem?.title = title
     }
 
+
+
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
 }

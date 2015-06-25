@@ -43,30 +43,13 @@ class MainViewController: UIViewController {
         var controller = storyboard.instantiateInitialViewController() as! UIViewController
         self.navigationController?.pushViewController(controller, animated: true)
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Try to do http request here for testing
-        
-    }
     
     override func viewWillAppear(animated: Bool) {
+        hideNavigationBar()
+    }
+
+    func hideNavigationBar() {
         self.navigationController?.navigationBarHidden = true
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

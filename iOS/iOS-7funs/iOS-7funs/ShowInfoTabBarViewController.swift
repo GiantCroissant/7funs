@@ -10,6 +10,10 @@ import UIKit
 
 class ShowInfoTabBarViewController: UITabBarController {
 
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
+
     override func viewWillAppear(animated: Bool) {
         hideNavigarionBar()
     }
