@@ -1,11 +1,14 @@
 package com.giantcroissant.android_7funs;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.Date;
@@ -32,7 +35,6 @@ public class CookBookListAdapter extends ArrayAdapter<CookBook> {
         LinearLayout itemView;
         // 讀取目前位置的記事物件
         final CookBook cookBook = getItem(position);
-
         if (convertView == null) {
             // 建立項目畫面元件
             itemView = new LinearLayout(getContext());
@@ -49,6 +51,7 @@ public class CookBookListAdapter extends ArrayAdapter<CookBook> {
         TextView titleView = (TextView) itemView.findViewById(R.id.cook_book_title_text);
         TextView lookCountView = (TextView) itemView.findViewById(R.id.cook_book_view_count_text);
         TextView collectCountView = (TextView) itemView.findViewById(R.id.collected_count_text);
+        ImageButton collectCookBookButton = (ImageButton) itemView.findViewById(R.id.collect_cook_book_Button);
 
         // 設定標題
         titleView.setText(cookBook.getName());
@@ -58,6 +61,12 @@ public class CookBookListAdapter extends ArrayAdapter<CookBook> {
 
         lookCountView.setText(String.valueOf(cookBook.getViewedPeopleCount()));
 
+
+        collectCookBookButton.setImageResource(R.drawable.heart_outline);
+        if(cookBook.getIsCollected())
+        {
+            collectCookBookButton.setImageResource(R.drawable.heart);
+        }
         return itemView;
     }
 
