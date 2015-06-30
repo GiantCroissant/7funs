@@ -19,6 +19,10 @@ import junit.framework.Test;
 import java.util.ArrayList;
 import java.util.UUID;
 
+import io.realm.Realm;
+import io.realm.RealmQuery;
+import io.realm.RealmResults;
+
 
 public class CookBookActivity extends ActionBarActivity {
 
@@ -27,13 +31,18 @@ public class CookBookActivity extends ActionBarActivity {
     private ListView cookBookListView;
     private CookBookListAdapter cookBookListAdapter;
     private ArrayList<CookBook> cookBookList;
+
+    private Realm realm;
+    private RealmQuery<CookBookRealm> cookBookQuery;
+    private RealmResults<CookBookRealm> cookBookRealmResult;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cook_book);
 
-        createFakeData();
+        getRealm();
+
 
         getView();
 
@@ -44,14 +53,61 @@ public class CookBookActivity extends ActionBarActivity {
         setButtonListener();
     }
 
+    private void getRealm()
+    {
+        realm = Realm.getInstance(this);
+        cookBookQuery = realm.where(CookBookRealm.class);
+        cookBookRealmResult = cookBookQuery.findAll();
+        if(cookBookRealmResult.size() < 1)
+        {
+            createFakeData();
+        }
+        else
+        {
+            getCookBookListData();
+        }
+
+    }
+
 
     private void createFakeData()
     {
         cookBookList = new ArrayList<CookBook>();
-        cookBookList.add(new CookBook(UUID.randomUUID().toString(), "三色嫩煎鱈魚-白家豪師傅", "CH37東風電視台＿料理美食", "Http://xd.com", "Http://xd.com", 9999, 9999, false));
-        cookBookList.add(new CookBook(UUID.randomUUID().toString(), "三色嫩煎鮭魚-白家豪師傅", "CH37東風電視台＿料理美食", "Http://xd.com", "Http://xd.com", 9999, 9999, false));
-        cookBookList.add(new CookBook(UUID.randomUUID().toString(), "三色嫩煎鮪魚-白家豪師傅", "CH37東風電視台＿料理美食", "Http://xd.com", "Http://xd.com", 9999, 9999, false));
+        cookBookList.add(new CookBook(UUID.randomUUID().toString(), "三色嫩煎鱈魚-白家豪師傅", "CH37東風電視台＿料理美食", "Http://xd.com", "Http://xd.com", "土雞半隻、大蒜十力、老薑一段、紅辣椒兩枝、九層塔一大把", "麻油1/3杯、米酒1杯、醬油1/3杯、冰糖1/2匙", "1.先準備好所需材料雞肉丁表面劃斜線用[雞肉醃料]醃漬入味，其他材料處理乾淨切成適當大小備用。 2.準備一炒鍋用小火煸香花椒粒。 3.接著依序炒香乾辣椒、薑片及蒜頭。 4.然後加入醃漬入味的雞肉丁，拌炒至6~7分熟。 5.接著再加入所有[調味]快速拌勻。 6.然後加入蒜苗、辣椒翻炒均勻。 7.最後完成前再加入熟花生粒拌勻即可。8.夠勁又夠味的宮保雞丁就完成囉。", 9999, 9999, false));
+        cookBookList.add(new CookBook(UUID.randomUUID().toString(), "三色嫩煎鮭魚-白家豪師傅", "CH37東風電視台＿料理美食", "Http://xd.com", "Http://xd.com", "土雞半隻、大蒜十力、老薑一段、紅辣椒兩枝、九層塔一大把", "麻油1/3杯、米酒1杯、醬油1/3杯、冰糖1/2匙", "1.先準備好所需材料雞肉丁表面劃斜線用[雞肉醃料]醃漬入味，其他材料處理乾淨切成適當大小備用。 2.準備一炒鍋用小火煸香花椒粒。 3.接著依序炒香乾辣椒、薑片及蒜頭。 4.然後加入醃漬入味的雞肉丁，拌炒至6~7分熟。 5.接著再加入所有[調味]快速拌勻。 6.然後加入蒜苗、辣椒翻炒均勻。 7.最後完成前再加入熟花生粒拌勻即可。8.夠勁又夠味的宮保雞丁就完成囉。",  9999, 9999, false));
+        cookBookList.add(new CookBook(UUID.randomUUID().toString(), "三色嫩煎鮪魚-白家豪師傅", "CH37東風電視台＿料理美食", "Http://xd.com", "Http://xd.com", "土雞半隻、大蒜十力、老薑一段、紅辣椒兩枝、九層塔一大把", "麻油1/3杯、米酒1杯、醬油1/3杯、冰糖1/2匙", "1.先準備好所需材料雞肉丁表面劃斜線用[雞肉醃料]醃漬入味，其他材料處理乾淨切成適當大小備用。 2.準備一炒鍋用小火煸香花椒粒。 3.接著依序炒香乾辣椒、薑片及蒜頭。 4.然後加入醃漬入味的雞肉丁，拌炒至6~7分熟。 5.接著再加入所有[調味]快速拌勻。 6.然後加入蒜苗、辣椒翻炒均勻。 7.最後完成前再加入熟花生粒拌勻即可。8.夠勁又夠味的宮保雞丁就完成囉。",  9999, 9999, false));
 
+        for (CookBook cookBook : cookBookList) {
+            realm.beginTransaction();
+
+            CookBookRealm cookBookRealm = realm.createObject(CookBookRealm.class);
+
+            cookBookRealm.setId(cookBook.getId());
+            cookBookRealm.setName(cookBook.getName());
+            cookBookRealm.setDescription(cookBook.getDescription());
+            cookBookRealm.setIngredient(cookBook.getIngredient());
+            cookBookRealm.setSauce(cookBook.getSauce());
+            cookBookRealm.setStep(cookBook.getStep());
+            cookBookRealm.setUrl(cookBook.getUrl());
+            cookBookRealm.setImageUrl(cookBook.getImageUrl());
+            cookBookRealm.setViewedPeopleCount(cookBook.getViewedPeopleCount());
+            cookBookRealm.setCollectedPeopleCount(cookBook.getCollectedPeopleCount());
+            cookBookRealm.setIsCollected(cookBook.getIsCollected());
+            cookBookRealm.setUploadTimestamp(cookBook.getUploadTimestamp());
+            cookBookRealm.setCookId("123456789");
+
+            realm.commitTransaction();
+        }
+    }
+
+    private void getCookBookListData()
+    {
+        cookBookList = new ArrayList<CookBook>();
+        for (CookBookRealm cookBookRealm : cookBookRealmResult) {
+            CookBook newCookBook = new CookBook(cookBookRealm.getId(),cookBookRealm.getName(),cookBookRealm.getDescription(),cookBookRealm.getUrl(),cookBookRealm.getImageUrl(),cookBookRealm.getIngredient(),cookBookRealm.getSauce(),cookBookRealm.getStep(), cookBookRealm.getViewedPeopleCount(), cookBookRealm.getCollectedPeopleCount(),cookBookRealm.getIsCollected());
+            newCookBook.setUploadTimestamp(cookBookRealm.getUploadTimestamp());
+            cookBookList.add(newCookBook);
+        }
     }
 
     private void getView()
@@ -131,9 +187,23 @@ public class CookBookActivity extends ActionBarActivity {
             parentRow = (View) parentRow.getParent();
             ListView listView = (ListView) parentRow.getParent();
             final int position = listView.getPositionForView(parentRow);
-        Log.d("itemPosition",String.valueOf(position));
-            cookBookList.get(position).setIsCollected(!cookBookList.get(position).getIsCollected());
+            Log.d("itemPosition",String.valueOf(position));
+
+            RealmQuery<CookBookRealm> beCollectedCookBookQuery;
+            RealmResults<CookBookRealm> beCollectedCookBookRealmResult;
+            beCollectedCookBookQuery = realm.where(CookBookRealm.class);
+            beCollectedCookBookQuery.equalTo("Id", cookBookList.get(position).getId());
+            beCollectedCookBookRealmResult  = beCollectedCookBookQuery.findAll();
+
+            realm.beginTransaction();
+            beCollectedCookBookRealmResult.get(0).setIsCollected(!cookBookList.get(position).getIsCollected());
+            realm.commitTransaction();
+
+            cookBookList.get(position).setIsCollected(beCollectedCookBookRealmResult.get(0).getIsCollected());
+//            cookBookList.get(position).setIsCollected(!cookBookList.get(position).getIsCollected());
             updateSingleRow(cookBookListView, position);
+
+
 //            cookBookListAdapter = new CookBookListAdapter(CookBookActivity.this, R.layout.cook_book_list_item, cookBookList);
 //            cookBookListView.setAdapter(cookBookListAdapter);
         }

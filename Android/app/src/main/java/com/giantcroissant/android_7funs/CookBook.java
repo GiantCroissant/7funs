@@ -15,18 +15,24 @@ public class CookBook {
     private String image_url;
     private String name;
     private String description;
+    private String ingredient;
+    private String sauce;
+    private String step;
     private Date uploadTimestamp;
     private int viewedPeople;
     private int collectedPeople;
     private boolean beCollected;
 
-    public CookBook(String id, String name, String description, String url, String image_url, int viewedPeople, int collectedPeople,boolean beCollected)
+    public CookBook(String id, String name, String description, String url, String image_url, String ingredient, String sauce, String step, int viewedPeople, int collectedPeople,boolean beCollected)
     {
         this.id = id;
         this.name = name;
         this.description = description;
         this.url = url;
         this.image_url = image_url;
+        this.ingredient = ingredient;
+        this.sauce = sauce;
+        this.step = step;
         this.uploadTimestamp = new Date(System.currentTimeMillis());
         this.viewedPeople = viewedPeople;
         this.collectedPeople = collectedPeople;
@@ -88,12 +94,34 @@ public class CookBook {
         this.url = url;
     }
 
-    public String getImageUrl() {
-        return image_url;
-    }
+    public String getImageUrl() { return image_url;}
 
     public void setImageUrl(String image_url) {
         this.image_url = image_url;
+    }
+
+    public String getIngredient() {
+        return ingredient;
+    }
+
+    public void setIngredient(String ingredient) {
+        this.ingredient = ingredient;
+    }
+
+    public String getSauce() {
+        return sauce;
+    }
+
+    public void setSauce(String sauce) {
+        this.sauce = sauce;
+    }
+
+    public String getStep() {
+        return step;
+    }
+
+    public void setStep(String step) {
+        this.step = step;
     }
 
     public int getViewedPeopleCount() {

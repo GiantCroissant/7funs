@@ -72,6 +72,7 @@ public class CookBookVideoTeachingFragment extends Fragment {
         if (mListener != null) {
             mListener.onVideoTeachingFragmentInteraction(string);
         }
+
     }
 
     @Override
