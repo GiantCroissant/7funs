@@ -1,9 +1,9 @@
 package com.giantcroissant.android_7funs;
 
 import android.content.Intent;
-import android.os.Debug;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.internal.widget.AdapterViewCompat;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
@@ -12,6 +12,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import junit.framework.Test;
 
 import java.util.ArrayList;
 import java.util.UUID;
@@ -47,6 +50,8 @@ public class CookBookActivity extends ActionBarActivity {
         cookBookList = new ArrayList<CookBook>();
         cookBookList.add(new CookBook(UUID.randomUUID().toString(), "三色嫩煎鱈魚-白家豪師傅", "CH37東風電視台＿料理美食", "Http://xd.com", "Http://xd.com", 9999, 9999, false));
         cookBookList.add(new CookBook(UUID.randomUUID().toString(), "三色嫩煎鮭魚-白家豪師傅", "CH37東風電視台＿料理美食", "Http://xd.com", "Http://xd.com", 9999, 9999, false));
+        cookBookList.add(new CookBook(UUID.randomUUID().toString(), "三色嫩煎鮪魚-白家豪師傅", "CH37東風電視台＿料理美食", "Http://xd.com", "Http://xd.com", 9999, 9999, false));
+
     }
 
     private void getView()
@@ -104,20 +109,16 @@ public class CookBookActivity extends ActionBarActivity {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                if (view.getId() == R.id.collect_cook_book_Button) {
-//                    cookBookList.get(position).setIsCollected(!cookBookList.get(position).getIsCollected());
-//                    cookBookListAdapter = new CookBookListAdapter(CookBookActivity.this, R.layout.cook_book_list_item, cookBookList);
-//                    cookBookListView.setAdapter(cookBookListAdapter);
-//
-//                    Log.e("Click", "Good");
-//                }
-                Intent intent = new Intent(CookBookActivity.this, MainActivity.class);
+
+                Intent intent = new Intent(CookBookActivity.this, CookBookDetialActivity.class);
+
+                intent.putExtra("position", position);
+                intent.putExtra("cookBookID", cookBookList.get(position).getId());
 
                 startActivityForResult(intent, 0);
             }
 
         });
-
         toolbar.setOnMenuItemClickListener(menuItemListener);
         toolbar.setNavigationOnClickListener(navigationListener);
     }
@@ -130,10 +131,11 @@ public class CookBookActivity extends ActionBarActivity {
             parentRow = (View) parentRow.getParent();
             ListView listView = (ListView) parentRow.getParent();
             final int position = listView.getPositionForView(parentRow);
-        Log.d("XX",String.valueOf(position));
+        Log.d("itemPosition",String.valueOf(position));
             cookBookList.get(position).setIsCollected(!cookBookList.get(position).getIsCollected());
-            cookBookListAdapter = new CookBookListAdapter(CookBookActivity.this, R.layout.cook_book_list_item, cookBookList);
-            cookBookListView.setAdapter(cookBookListAdapter);
+            updateSingleRow(cookBookListView, position);
+//            cookBookListAdapter = new CookBookListAdapter(CookBookActivity.this, R.layout.cook_book_list_item, cookBookList);
+//            cookBookListView.setAdapter(cookBookListAdapter);
         }
 
     }
@@ -158,5 +160,16 @@ public class CookBookActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void updateSingleRow(ListView listView, int position) {
+
+        int start = listView.getFirstVisiblePosition();
+        for(int i=start, j=listView.getLastVisiblePosition();i<=j;i++)
+            if(position == i){
+                View view = listView.getChildAt(i-start);
+                listView.getAdapter().getView(i, view, listView);
+                break;
+            }
     }
 }

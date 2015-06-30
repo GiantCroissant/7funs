@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.giantcroissant.android_7funs.CookBookPhotoTeachingFragment">
+
+<include
+    android:id="@+id/cook_book_detial_tool_bar"
+    layout="@layout/tool_bar"
+    ></include>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/cook_book_detial_tool_bar">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/teachingfragment"
+        android:background="#ff737373">
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linearLayout2"
+        android:layout_weight="8">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/photo_teaching_button"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:background="@color/White"
+            android:layout_marginRight="2dp"
+            android:src="@drawable/teaching_photo"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/video_teaching_button"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:background="@color/White"
+            android:layout_marginLeft="1dp"
+            android:src="@drawable/teaching_video"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp" />
+    </LinearLayout>
+</LinearLayout>
+
+</RelativeLayout>

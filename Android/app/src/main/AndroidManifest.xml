@@ -52,6 +52,10 @@
             android:name=".ShowAndCookActivity"
             android:label="@string/title_activity_show_and_cook" >
         </activity>
+        <activity
+            android:name=".CookBookDetialActivity"
+            android:label="@string/title_activity_cook_book_detial" >
+        </activity>
     </application>
 
 </manifest>

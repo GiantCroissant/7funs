@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/list_cook_book"
         android:layout_below="@+id/cook_book_list_tool_bar"
-        android:clickable="true"/>
+        android:clickable="true"
+        android:touchscreenBlocksFocus="true" />
 
 </RelativeLayout>

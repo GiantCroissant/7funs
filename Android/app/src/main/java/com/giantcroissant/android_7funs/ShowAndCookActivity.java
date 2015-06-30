@@ -67,16 +67,9 @@ public class ShowAndCookActivity extends ActionBarActivity implements ShowFragme
 
     private void setDefaultFragment()
     {
-
-//        FragmentManager fragmentManager = getFragmentManager();
-//        android.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.add(R.id.contentfragment, new ShowFragment());
         fragmentTransaction.commit();
-
-//        fragmentTransaction = fragmentManager.beginTransaction();
-//        fragmentTransaction.add(R.id.cookfragment, new CooksFragment());
-//        fragmentTransaction.commit();
     }
 
     @Override

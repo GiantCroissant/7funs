@@ -77,7 +77,8 @@
                 android:nestedScrollingEnabled="false"
                 android:paddingTop="15dp"
                 android:paddingBottom="15dp"
-                android:layout_marginLeft="10dp" />
+                android:layout_marginLeft="10dp"
+                android:focusable="false" />
 
             <TextView
                 android:layout_width="wrap_content"
