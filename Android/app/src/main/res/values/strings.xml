@@ -21,4 +21,7 @@
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>
     <string name="title_activity_cook_book_detial">CookBookDetialActivity</string>
+
+    <string name="food">1.先準備好所需材料雞肉丁表面劃斜線用[雞肉醃料]醃漬入味，其他材料處理乾淨切成適當大小備用。 2.準備一炒鍋用小火煸香花椒粒。 3.接著依序炒香乾辣椒、薑片及蒜頭。 4.然後加入醃漬入味的雞肉丁，拌炒至6~7分熟。 5.接著再加入所有[調味]快速拌勻。 6.然後加入蒜苗、辣椒翻炒均勻。 7.最後完成前再加入熟花生粒拌勻即可。8.夠勁又夠味的宮保雞丁就完成囉。</string>
+
 </resources>

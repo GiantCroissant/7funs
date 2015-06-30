@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.UUID;
@@ -24,14 +26,16 @@ public class CookBookDetialActivity extends ActionBarActivity implements CookBoo
 
     private Toolbar toolbar;                              // Declaring the Toolbar Object
     private TextView textView;
+    private ImageButton photoButton;
+    private ImageButton videoButton;
 
     private String cookBookID;
     private CookBook cookBook;
 
 
-//    private Realm realm;
-//    private RealmQuery<CookBookRealm> cookBookQuery;
-//    private RealmResults<CookBookRealm> cookBookRealmResult;
+    private Realm realm;
+    private RealmQuery<CookBookRealm> cookBookQuery;
+    private RealmResults<CookBookRealm> cookBookRealmResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +58,8 @@ public class CookBookDetialActivity extends ActionBarActivity implements CookBoo
     private void getView()
     {
         toolbar = (Toolbar) findViewById(R.id.cook_book_detial_tool_bar); // Attaching the layout to the toolbar object
+        photoButton = (ImageButton) findViewById(R.id.photo_teaching_button);
+        videoButton = (ImageButton) findViewById(R.id.video_teaching_button);
     }
 
     private void setToolbar()
@@ -87,57 +93,47 @@ public class CookBookDetialActivity extends ActionBarActivity implements CookBoo
 
     private void setDefaultFragment()
     {
-
-//        FragmentManager fragmentManager = getFragmentManager();
-//        android.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.add(R.id.teachingfragment, new CookBookPhotoTeachingFragment());
         fragmentTransaction.commit();
-
-//        fragmentTransaction = fragmentManager.beginTransaction();
-//        fragmentTransaction.add(R.id.cookfragment, new CooksFragment());
-//        fragmentTransaction.commit();
     }
 
     private void getRealm()
     {
-//        realm = Realm.getInstance(this);
-//        cookBookQuery = realm.where(CookBookRealm.class);
-//        cookBookQuery.equalTo("Id", cookBookID);
-//        cookBookRealmResult = cookBookQuery.findAll();
+        realm = Realm.getInstance(this);
+        cookBookQuery = realm.where(CookBookRealm.class);
+        cookBookQuery.equalTo("Id", cookBookID);
+        cookBookRealmResult = cookBookQuery.findAll();
         getCookBookData();
     }
 
     private void getCookBookData()
     {
-//        for (CookBookRealm cookBookRealm : cookBookRealmResult) {
-//            Question newQuestion = new Question(cookBookRealm.getId(),cookBookRealm.getTitle(),cookBookRealm.getContent(),cookBookRealm.getOwnerName(),cookBookRealm.getOwnerIconUrl());
-//            newQuestion.setCreateTime(cookBookRealm.getCreateTime());
-//
-//            question = newQuestion;
-//        }
-        cookBook = new CookBook(UUID.randomUUID().toString(), "三色嫩煎鱈魚-白家豪師傅", "CH37東風電視台＿料理美食", "Http://xd.com", "Http://xd.com", 9999, 9999, false);
+        for (CookBookRealm cookBookRealm : cookBookRealmResult) {
+            CookBook newCookBook = new CookBook(cookBookRealm.getId(), cookBookRealm.getName(), cookBookRealm.getDescription(), cookBookRealm.getUrl(), cookBookRealm.getImageUrl(), cookBookRealm.getIngredient(), cookBookRealm.getSauce(), cookBookRealm.getStep(), cookBookRealm.getViewedPeopleCount(), cookBookRealm.getCollectedPeopleCount(), cookBookRealm.getIsCollected());
+            newCookBook.setUploadTimestamp(cookBookRealm.getUploadTimestamp());
+
+            cookBook = newCookBook;
+        }
+//        cookBook = new CookBook(UUID.randomUUID().toString(), "三色嫩煎鱈魚-白家豪師傅", "CH37東風電視台＿料理美食", "Http://xd.com", "Http://xd.com", "土雞半隻、大蒜十力、老薑一段、紅辣椒兩枝、九層塔一大把", "麻油1/3杯、米酒1杯、醬油1/3杯、冰糖1/2匙", "1.把雞肉切丁\n2.大蒜切末\n3.倒入鍋中\n4.小火慢熬",  9999, 9999, false);
     }
 
 
     @Override
     public void onClick(View v)
     {
-//        FragmentManager fragmentManager = getSupportFragmentManager();
-//        android.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
 
         if (v.getId() == R.id.photo_teaching_button) {
 
-//            Intent i = new Intent(ShowAndCookActivity.this, ShowInfoActivity.class);
-//            startActivity(i);
-//            finish();
             if (cookBookPhotoTeachingFragment == null)
             {
                 cookBookPhotoTeachingFragment = new CookBookPhotoTeachingFragment();
             }
             fragmentTransaction.replace(R.id.teachingfragment, cookBookPhotoTeachingFragment);
             textView.setText(cookBook.getName());
+            photoButton.setImageResource(R.drawable.teaching_photo_selected);
+            videoButton.setImageResource(R.drawable.teaching_video);
 
         }
 
@@ -153,6 +149,8 @@ public class CookBookDetialActivity extends ActionBarActivity implements CookBoo
 
             fragmentTransaction.replace(R.id.teachingfragment, cookBookVideoTeachingFragment);
             textView.setText(cookBook.getName());
+            photoButton.setImageResource(R.drawable.teaching_photo);
+            videoButton.setImageResource(R.drawable.teaching_video_selected);
 
         }
 
