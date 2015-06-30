@@ -13,4 +13,6 @@
 
 #import "YTPlayerView.h"
 
+#import "KeychainWrapper.h"
+
 #endif

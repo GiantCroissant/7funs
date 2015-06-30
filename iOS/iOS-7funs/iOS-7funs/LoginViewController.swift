@@ -9,7 +9,32 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    let accountName = "abc"
+    let passwrod = "1234"
 
+    @IBOutlet weak var accountText: UITextField!
+    @IBOutlet weak var passwordText: UITextField!
+    
+    @IBAction func loginPressed(sender: AnyObject) {
+        
+        let checkResult = checkLogin(accountText.text, password: passwordText.text)
+        if (checkResult) {
+            self.navigationController?.popViewControllerAnimated(true)
+        }
+    }
+    
+    func checkLogin(username: String, password: String ) -> Bool {
+        if ((username == accountName) && (password == passwrod)) {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    @IBAction func facebookPressed(sender: AnyObject) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

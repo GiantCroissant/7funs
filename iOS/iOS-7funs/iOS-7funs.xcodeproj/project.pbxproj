@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		092C04671B42744E0042BAE1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 092C04661B42744E0042BAE1 /* Login.storyboard */; };
 		092C04691B42747B0042BAE1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092C04681B42747B0042BAE1 /* LoginViewController.swift */; };
+		092C046F1B428A3B0042BAE1 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 092C046E1B428A3B0042BAE1 /* KeychainWrapper.m */; };
 		0960DE831B3A808500149484 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960DE821B3A808500149484 /* NetworkReachability.swift */; };
 		0960DE871B3A94F300149484 /* QandATableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960DE861B3A94F300149484 /* QandATableViewController.swift */; };
 		0960DE891B3A98AA00149484 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0960DE881B3A98AA00149484 /* Question.swift */; };
@@ -75,6 +76,8 @@
 /* Begin PBXFileReference section */
 		092C04661B42744E0042BAE1 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		092C04681B42747B0042BAE1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		092C046D1B428A3B0042BAE1 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		092C046E1B428A3B0042BAE1 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 		0960DE821B3A808500149484 /* NetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		0960DE861B3A94F300149484 /* QandATableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QandATableViewController.swift; sourceTree = "<group>"; };
 		0960DE881B3A98AA00149484 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -312,6 +315,8 @@
 		3B5A41C21B248BBB00EBD78E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				092C046D1B428A3B0042BAE1 /* KeychainWrapper.h */,
+				092C046E1B428A3B0042BAE1 /* KeychainWrapper.m */,
 				09ECF54B1B3961EE001FC3EF /* Assets */,
 				09ECF5481B3961D9001FC3EF /* YTPlayerView.h */,
 				09ECF5491B3961D9001FC3EF /* YTPlayerView.m */,
@@ -496,6 +501,7 @@
 				3B1FDEB41B370AC100A41EE4 /* ShowInfoTabBarViewController.swift in Sources */,
 				09ECF54A1B3961D9001FC3EF /* YTPlayerView.m in Sources */,
 				0997B6041B32C664000534BE /* RecipesDishTableViewCell.swift in Sources */,
+				092C046F1B428A3B0042BAE1 /* KeychainWrapper.m in Sources */,
 				092C04691B42747B0042BAE1 /* LoginViewController.swift in Sources */,
 				09EADF331B37B03800DD5723 /* RecipesInstructionViewController.swift in Sources */,
 				3B0ADD4F1B292E4600692ABE /* VideosViewController.swift in Sources */,
