@@ -13,6 +13,16 @@ class RecipesInstructionViewController: UIViewController {
     var dishDetail: DishDetail!
 
     @IBOutlet weak var dishImage: UIImageView!
+    @IBAction func favoritePressed(sender: AnyObject) {
+        pushStoryboard("Login")
+    }
+    
+    func pushStoryboard(sbName: String) {
+        var storyboard = UIStoryboard(name: sbName, bundle: nil)
+        var controller = storyboard.instantiateInitialViewController() as! UIViewController
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

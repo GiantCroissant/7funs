@@ -19,6 +19,16 @@ class RecipesTableViewController: UITableViewController {
     
     var dishes = Realm().objects(Dish)
 
+    @IBAction func favoritePressed(sender: AnyObject) {
+        pushStoryboard("Login")
+    }
+    
+    func pushStoryboard(sbName: String) {
+        var storyboard = UIStoryboard(name: sbName, bundle: nil)
+        var controller = storyboard.instantiateInitialViewController() as! UIViewController
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = false
     }
