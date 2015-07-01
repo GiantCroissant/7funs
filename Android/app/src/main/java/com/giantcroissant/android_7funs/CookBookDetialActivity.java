@@ -30,7 +30,7 @@ public class CookBookDetialActivity extends ActionBarActivity implements CookBoo
     private ImageButton videoButton;
 
     private String cookBookID;
-    private CookBook cookBook;
+    public CookBook cookBook;
 
 
     private Realm realm;
@@ -94,7 +94,7 @@ public class CookBookDetialActivity extends ActionBarActivity implements CookBoo
     private void setDefaultFragment()
     {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.add(R.id.teachingfragment, new CookBookPhotoTeachingFragment());
+        fragmentTransaction.add(R.id.teachingfragment, new CookBookPhotoTeachingFragment().newInstance(cookBook));
         fragmentTransaction.commit();
     }
 
@@ -128,7 +128,8 @@ public class CookBookDetialActivity extends ActionBarActivity implements CookBoo
 
             if (cookBookPhotoTeachingFragment == null)
             {
-                cookBookPhotoTeachingFragment = new CookBookPhotoTeachingFragment();
+//                cookBookPhotoTeachingFragment = new CookBookPhotoTeachingFragment().newInstance(cookBook.getIngredient(),cookBook.getSauce(),cookBook.getStep(),cookBook.getViewedPeopleCount(),cookBook.getCollectedPeopleCount(),cookBook.getIsCollected(),cookBook);
+                cookBookPhotoTeachingFragment = new CookBookPhotoTeachingFragment().newInstance(cookBook);
             }
             fragmentTransaction.replace(R.id.teachingfragment, cookBookPhotoTeachingFragment);
             textView.setText(cookBook.getName());

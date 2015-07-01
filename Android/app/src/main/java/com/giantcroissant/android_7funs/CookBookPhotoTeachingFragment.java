@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -26,13 +27,34 @@ public class CookBookPhotoTeachingFragment extends Fragment implements Observabl
     private TextView ingredientContentText;
     private TextView sauceContentText;
     private TextView stepContentText;
+    TextView lookCountView;
+    TextView collectCountView;
+    ImageButton collectCookBookButton;
 //    private LinearLayout mToolbarLinearLayout;
 
     private LinearLayout mContentLinearLayout;
 
-    View rootView;
+    private View rootView;
+    private CookBook cookBook;
 
     public CookBookPhotoTeachingFragment() {
+    }
+
+//    public static final CookBookPhotoTeachingFragment newInstance(String ingredient, String sauce, String step, int viewedPeopleCount, int collectedPeopleCount, boolean isCollected, CookBook cookBook) {
+    public static final CookBookPhotoTeachingFragment newInstance(CookBook cookBook) {
+        CookBookPhotoTeachingFragment cookBookPhotoTeachingFragment =  new CookBookPhotoTeachingFragment();
+        cookBookPhotoTeachingFragment.cookBook = cookBook;
+
+//        Bundle bundle = new Bundle(6);
+//        bundle.putString("ingredient", ingredient);
+//        bundle.putString("sauce", sauce);
+//        bundle.putString("step", step);
+//        bundle.putInt("viewedPeopleCount", viewedPeopleCount);
+//        bundle.putInt("collectedPeopleCount", collectedPeopleCount);
+//        bundle.putBoolean("isCollected", isCollected);
+//        cookBookPhotoTeachingFragment.setArguments(bundle);
+
+        return cookBookPhotoTeachingFragment;
     }
 
     @Override
@@ -54,6 +76,39 @@ public class CookBookPhotoTeachingFragment extends Fragment implements Observabl
         ingredientContentText = (TextView) rootView.findViewById(R.id.ingredient_content_text);
         sauceContentText = (TextView) rootView.findViewById(R.id.sauce_content_text);
         stepContentText = (TextView) rootView.findViewById(R.id.step_content_text);
+
+        lookCountView = (TextView) rootView.findViewById(R.id.cookbook_view_count_text);
+        collectCountView = (TextView) rootView.findViewById(R.id.collectedcount_text);
+        collectCookBookButton = (ImageButton) rootView.findViewById(R.id.collectCookBookButton);
+
+
+//        ingredientContentText.setText(getArguments().getString("ingredient"));
+//        sauceContentText.setText(getArguments().getString("sauce"));
+//        stepContentText.setText(getArguments().getString("step"));
+//        lookCountView.setText(getArguments().getString("viewedPeopleCount"));
+//        collectCountView.setText(getArguments().getString("collectedPeopleCount"));
+//        if(getArguments().getBoolean("isCollected"))
+//        {
+//            collectCookBookButton.setImageResource(R.drawable.heart);
+//        }
+//        else
+//        {
+//            collectCookBookButton.setImageResource(R.drawable.heart_outline);
+//        }
+
+        ingredientContentText.setText(cookBook.getIngredient());
+        sauceContentText.setText(cookBook.getSauce());
+        stepContentText.setText(cookBook.getStep());
+        lookCountView.setText(String.valueOf(cookBook.getViewedPeopleCount()));
+        collectCountView.setText(String.valueOf(cookBook.getCollectedPeopleCount()));
+        if(cookBook.getIsCollected())
+        {
+            collectCookBookButton.setImageResource(R.drawable.heart);
+        }
+        else
+        {
+            collectCookBookButton.setImageResource(R.drawable.heart_outline);
+        }
         
 //        mToolbar = (Toolbar) findViewById(R.id.toolbar);
 //        mToolbarLinearLayout = (LinearLayout) rootView.findViewById(R.id.toolbar_linear_layout);
@@ -144,7 +199,7 @@ public class CookBookPhotoTeachingFragment extends Fragment implements Observabl
 
         // translate image and toolbar
 //        ViewCompat.setTranslationY(mToolbarLinearLayout, newY);
-        ViewCompat.setTranslationY(mImageFrameLayout, scrollY * 0.7f);
+        ViewCompat.setTranslationY(mImageFrameLayout, scrollY * 0.5f);
     }
 
 }

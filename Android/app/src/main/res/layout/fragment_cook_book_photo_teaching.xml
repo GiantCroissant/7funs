@@ -29,7 +29,7 @@
                 android:layout_marginBottom="@dimen/activity_vertical_margin"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:background="#ff6b6b6b">
+                android:background="#006b6b6b">
 
                     <RelativeLayout
                         android:orientation="horizontal"
@@ -37,7 +37,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:clickable="false"
-                        android:background="@color/White">
+                        android:background="@color/White"
+                        android:layout_marginTop="@dimen/activity_vertical_margin">
 
                         <ImageView
                             android:layout_width="40dp"
@@ -53,7 +54,9 @@
                             android:layout_marginLeft="10dp"
                             android:focusable="false"
                             android:layout_alignParentTop="true"
-                            android:layout_alignParentBottom="true" />
+                            android:layout_alignParentBottom="true"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -61,7 +64,7 @@
                             android:layout_gravity="top"
                             android:text="999"
                             android:textColor="#ff9a9a9a"
-                            android:id="@+id/cook_book_view_count_text"
+                            android:id="@+id/cookbook_view_count_text"
                             android:textSize="16dp"
                             android:layout_weight="1"
                             android:background="#ffffffff"
@@ -79,14 +82,14 @@
                             android:textColor="#ff9a9a9a"
                             android:id="@+id/textView5"
                             android:textSize="16dp"
-                            android:layout_toRightOf="@+id/cook_book_view_count_text"
+                            android:layout_toRightOf="@+id/cookbook_view_count_text"
                             android:layout_alignParentRight="false"
                             android:layout_alignParentEnd="false"
                             android:layout_weight="1"
                             android:background="#ffffffff"
                             android:clickable="false"
                             android:gravity="center_vertical|left"
-                            android:layout_alignBottom="@+id/cook_book_view_count_text"
+                            android:layout_alignBottom="@+id/cookbook_view_count_text"
                             android:layout_alignParentTop="true" />
 
                         <ImageView
@@ -114,7 +117,7 @@
                             android:layout_gravity="top"
                             android:text="5"
                             android:textColor="#ff9a9a9a"
-                            android:id="@+id/collected_count_text"
+                            android:id="@+id/collectedcount_text"
                             android:textSize="16dp"
                             android:layout_weight="1"
                             android:background="#ffffffff"
@@ -140,10 +143,10 @@
                             android:textAlignment="center"
                             android:gravity="center_vertical|left"
                             android:clickable="false"
-                            android:layout_toRightOf="@+id/collected_count_text"
+                            android:layout_toRightOf="@+id/collectedcount_text"
                             android:layout_alignParentTop="true"
                             android:layout_alignParentBottom="true"
-                            android:layout_alignBottom="@+id/collected_count_text" />
+                            android:layout_alignBottom="@+id/collectedcount_text" />
 
                     </RelativeLayout>
 
@@ -274,7 +277,7 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton12"
+        android:id="@+id/collectCookBookButton"
         android:src="@drawable/heart_outline"
         android:background="#50ffffff"
         android:layout_alignParentRight="true"
