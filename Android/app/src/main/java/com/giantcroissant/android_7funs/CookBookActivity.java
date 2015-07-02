@@ -207,6 +207,21 @@ public class CookBookActivity extends ActionBarActivity {
 //            cookBookListAdapter = new CookBookListAdapter(CookBookActivity.this, R.layout.cook_book_list_item, cookBookList);
 //            cookBookListView.setAdapter(cookBookListAdapter);
         }
+        else if (view.getId() == R.id.cook_book_image) {
+            View parentRow = (View) view.getParent();
+            parentRow = (View) parentRow.getParent();
+            parentRow = (View) parentRow.getParent();
+            ListView listView = (ListView) parentRow.getParent();
+            final int position = listView.getPositionForView(parentRow);
+            Log.d("itemPosition", String.valueOf(position));
+
+            Intent intent = new Intent(CookBookActivity.this, CookBookDetialActivity.class);
+
+            intent.putExtra("position", position);
+            intent.putExtra("cookBookID", cookBookList.get(position).getId());
+
+            startActivityForResult(intent, 0);
+        }
 
     }
 

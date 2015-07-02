@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa5e3a61-31bf-41b8-b547-fcd38d719661" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Android/app/src/main/java/com/giantcroissant/android_7funs/CookBookDetialActivity.java" afterPath="$PROJECT_DIR$/Android/app/src/main/java/com/giantcroissant/android_7funs/CookBookDetialActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Android/app/src/main/java/com/giantcroissant/android_7funs/CookBookPhotoTeachingFragment.java" afterPath="$PROJECT_DIR$/Android/app/src/main/java/com/giantcroissant/android_7funs/CookBookPhotoTeachingFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Android/app/src/main/res/layout/fragment_cook_book_photo_teaching.xml" afterPath="$PROJECT_DIR$/Android/app/src/main/res/layout/fragment_cook_book_photo_teaching.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="7funs.iws" />

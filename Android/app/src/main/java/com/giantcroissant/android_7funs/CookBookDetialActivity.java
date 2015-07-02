@@ -1,5 +1,6 @@
 package com.giantcroissant.android_7funs;
 
+import android.app.Fragment;
 import android.content.Intent;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
@@ -8,18 +9,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import java.util.UUID;
+import com.google.android.youtube.player.YouTubeBaseActivity;
 
 import io.realm.Realm;
 import io.realm.RealmQuery;
 import io.realm.RealmResults;
 
 
-public class CookBookDetialActivity extends ActionBarActivity implements CookBookPhotoTeachingFragment.OnFragmentInteractionListener, CookBookVideoTeachingFragment.OnFragmentInteractionListener,View.OnClickListener{
+public class CookBookDetialActivity extends ActionBarActivity implements YouTubeFragment.OnFragmentInteractionListener, ShowFragment.OnFragmentInteractionListener, CookBookPhotoTeachingFragment.OnFragmentInteractionListener, CookBookVideoTeachingFragment.OnFragmentInteractionListener,View.OnClickListener {
 
     CookBookPhotoTeachingFragment cookBookPhotoTeachingFragment;
     CookBookVideoTeachingFragment cookBookVideoTeachingFragment;
@@ -31,6 +31,7 @@ public class CookBookDetialActivity extends ActionBarActivity implements CookBoo
 
     private String cookBookID;
     public CookBook cookBook;
+    private int tabIndex = 0;
 
 
     private Realm realm;
@@ -124,7 +125,7 @@ public class CookBookDetialActivity extends ActionBarActivity implements CookBoo
     {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
 
-        if (v.getId() == R.id.photo_teaching_button) {
+        if (v.getId() == R.id.photo_teaching_button && tabIndex != 0) {
 
             if (cookBookPhotoTeachingFragment == null)
             {
@@ -135,23 +136,25 @@ public class CookBookDetialActivity extends ActionBarActivity implements CookBoo
             textView.setText(cookBook.getName());
             photoButton.setImageResource(R.drawable.teaching_photo_selected);
             videoButton.setImageResource(R.drawable.teaching_video);
+            tabIndex = 0;
 
         }
 
-        if (v.getId() == R.id.video_teaching_button) {
+        if (v.getId() == R.id.video_teaching_button && tabIndex != 1) {
 
 //            Intent i = new Intent(ShowAndCookActivity.this, CooksInfoActivity.class);
 //            startActivity(i);
 //            finish();
             if (cookBookVideoTeachingFragment == null)
             {
-                cookBookVideoTeachingFragment = new CookBookVideoTeachingFragment();
+                cookBookVideoTeachingFragment = new CookBookVideoTeachingFragment().newInstance(cookBook);
             }
 
             fragmentTransaction.replace(R.id.teachingfragment, cookBookVideoTeachingFragment);
             textView.setText(cookBook.getName());
             photoButton.setImageResource(R.drawable.teaching_photo);
             videoButton.setImageResource(R.drawable.teaching_video_selected);
+            tabIndex = 1;
 
         }
 
@@ -188,6 +191,17 @@ public class CookBookDetialActivity extends ActionBarActivity implements CookBoo
 
     @Override
     public void onVideoTeachingFragmentInteraction(String string) {
+        // Do different stuff
+    }
+
+
+    @Override
+    public void onShowFragmentInteraction(String string) {
+
+    }
+
+    @Override
+    public void onYouTubeFragmentInteraction(String string) {
         // Do different stuff
     }
 }

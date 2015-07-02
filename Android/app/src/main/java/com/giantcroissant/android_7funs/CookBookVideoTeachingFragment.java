@@ -1,12 +1,26 @@
 package com.giantcroissant.android_7funs;
 
 import android.app.Activity;
-import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.Toast;
+
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerFragment;
+import com.google.android.youtube.player.YouTubePlayerSupportFragment;
+import com.google.android.youtube.player.YouTubePlayerView;
+
+import java.io.FileDescriptor;
+import java.io.PrintWriter;
+import java.util.List;
 
 
 /**
@@ -17,34 +31,19 @@ import android.view.ViewGroup;
  * Use the {@link CookBookVideoTeachingFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CookBookVideoTeachingFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+public class CookBookVideoTeachingFragment extends Fragment implements YouTubePlayer.OnInitializedListener {
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
+    private CookBook cookBook;
+    private View rootView;
+    private YouTubeFragment youTubeFragment;
     private OnFragmentInteractionListener mListener;
+    public String YOUTUBE_VIDEO_ID = "pKbac2kh0nM";
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment CookBookVideoTeachingFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static CookBookVideoTeachingFragment newInstance(String param1, String param2) {
-        CookBookVideoTeachingFragment fragment = new CookBookVideoTeachingFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+    public static CookBookVideoTeachingFragment newInstance(CookBook cookBook) {
+        CookBookVideoTeachingFragment cookBookVideoTeachingFragment = new CookBookVideoTeachingFragment();
+        cookBookVideoTeachingFragment.cookBook = cookBook;
+        return cookBookVideoTeachingFragment;
     }
 
     public CookBookVideoTeachingFragment() {
@@ -54,17 +53,22 @@ public class CookBookVideoTeachingFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        rootView = inflater.inflate(R.layout.fragment_cook_book_video_teaching, container, false);
+
+        YouTubePlayerSupportFragment youTubeFragment = new YouTubePlayerSupportFragment();
+        youTubeFragment.initialize(Config.DEVELOPER_KEY, this);
+
+        FragmentTransaction fragmentTransaction = getChildFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.YOUTUBE_PLAYER, youTubeFragment);
+        fragmentTransaction.commit();
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cook_book_video_teaching, container, false);
+        return rootView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -106,5 +110,20 @@ public class CookBookVideoTeachingFragment extends Fragment {
         // TODO: Update argument type and name
         public void onVideoTeachingFragmentInteraction(String string);
     }
+
+    @Override
+    public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer player, boolean wasRestored) {
+        if (!wasRestored) {
+            player.cueVideo(YOUTUBE_VIDEO_ID);
+        }
+    }
+
+    @Override
+    public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
+        Toast.makeText(getActivity(), "Failured to Initialize!", Toast.LENGTH_LONG).show();
+    }
+
+
+
 
 }

@@ -1,5 +1,6 @@
 package com.giantcroissant.android_7funs;
 
+import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v4.view.ViewCompat;
@@ -15,11 +16,15 @@ import android.widget.TextView;
 
 
 /**
- * A placeholder fragment containing a simple view.
+ * A simple {@link Fragment} subclass.
+ * Activities that contain this fragment must implement the
+ * {@link CookBookPhotoTeachingFragment.OnFragmentInteractionListener} interface
+ * to handle interaction events.
+ * Use the {@link CookBookPhotoTeachingFragment#newInstance} factory method to
+ * create an instance of this fragment.
  */
 public class CookBookPhotoTeachingFragment extends Fragment implements ObservableScrollView.Callback {
 
-    private OnFragmentInteractionListener mListener;
 
     private ObservableScrollView mScrollView;
     private ImageView mImageView;
@@ -30,9 +35,9 @@ public class CookBookPhotoTeachingFragment extends Fragment implements Observabl
     TextView lookCountView;
     TextView collectCountView;
     ImageButton collectCookBookButton;
-//    private LinearLayout mToolbarLinearLayout;
 
     private LinearLayout mContentLinearLayout;
+    private OnFragmentInteractionListener mListener;
 
     private View rootView;
     private CookBook cookBook;
@@ -40,19 +45,9 @@ public class CookBookPhotoTeachingFragment extends Fragment implements Observabl
     public CookBookPhotoTeachingFragment() {
     }
 
-//    public static final CookBookPhotoTeachingFragment newInstance(String ingredient, String sauce, String step, int viewedPeopleCount, int collectedPeopleCount, boolean isCollected, CookBook cookBook) {
     public static final CookBookPhotoTeachingFragment newInstance(CookBook cookBook) {
         CookBookPhotoTeachingFragment cookBookPhotoTeachingFragment =  new CookBookPhotoTeachingFragment();
         cookBookPhotoTeachingFragment.cookBook = cookBook;
-
-//        Bundle bundle = new Bundle(6);
-//        bundle.putString("ingredient", ingredient);
-//        bundle.putString("sauce", sauce);
-//        bundle.putString("step", step);
-//        bundle.putInt("viewedPeopleCount", viewedPeopleCount);
-//        bundle.putInt("collectedPeopleCount", collectedPeopleCount);
-//        bundle.putBoolean("isCollected", isCollected);
-//        cookBookPhotoTeachingFragment.setArguments(bundle);
 
         return cookBookPhotoTeachingFragment;
     }
@@ -62,10 +57,17 @@ public class CookBookPhotoTeachingFragment extends Fragment implements Observabl
                              Bundle savedInstanceState) {
 
         rootView = inflater.inflate(R.layout.fragment_cook_book_photo_teaching, container, false);
-//        // set content view
-//        setContentView(R.layout.fragment_cook_book_photo_teaching);
 
-        // view matching
+        getAllView();
+        setData();
+        setupScrollView();
+
+        return rootView;
+    }
+
+
+    public void getAllView()
+    {
         mScrollView = (ObservableScrollView) rootView.findViewById(R.id.notify_scroll_view);
 
         mImageView = (ImageView) rootView.findViewById(R.id.image_view);
@@ -80,22 +82,10 @@ public class CookBookPhotoTeachingFragment extends Fragment implements Observabl
         lookCountView = (TextView) rootView.findViewById(R.id.cookbook_view_count_text);
         collectCountView = (TextView) rootView.findViewById(R.id.collectedcount_text);
         collectCookBookButton = (ImageButton) rootView.findViewById(R.id.collectCookBookButton);
+    }
 
-
-//        ingredientContentText.setText(getArguments().getString("ingredient"));
-//        sauceContentText.setText(getArguments().getString("sauce"));
-//        stepContentText.setText(getArguments().getString("step"));
-//        lookCountView.setText(getArguments().getString("viewedPeopleCount"));
-//        collectCountView.setText(getArguments().getString("collectedPeopleCount"));
-//        if(getArguments().getBoolean("isCollected"))
-//        {
-//            collectCookBookButton.setImageResource(R.drawable.heart);
-//        }
-//        else
-//        {
-//            collectCookBookButton.setImageResource(R.drawable.heart_outline);
-//        }
-
+    public void setData()
+    {
         ingredientContentText.setText(cookBook.getIngredient());
         sauceContentText.setText(cookBook.getSauce());
         stepContentText.setText(cookBook.getStep());
@@ -109,14 +99,6 @@ public class CookBookPhotoTeachingFragment extends Fragment implements Observabl
         {
             collectCookBookButton.setImageResource(R.drawable.heart_outline);
         }
-        
-//        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-//        mToolbarLinearLayout = (LinearLayout) rootView.findViewById(R.id.toolbar_linear_layout);
-
-        // more setup
-        setupScrollView();
-//        setupToolbar();
-        return rootView;
     }
 
 
@@ -165,7 +147,7 @@ public class CookBookPhotoTeachingFragment extends Fragment implements Observabl
                     // adjust top margin of content linear layout
                     ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) mContentLinearLayout.getLayoutParams();
                     if (marginLayoutParams.topMargin != + imageHeight) {            //toolbarLinearLayoutHeight + imageHeight) {
-                        marginLayoutParams.topMargin = + imageHeight;               //toolbarLinearLayoutHeight + imageHeight;
+                        marginLayoutParams.topMargin =  + imageHeight;               //toolbarLinearLayoutHeight + imageHeight;
                         mContentLinearLayout.setLayoutParams(marginLayoutParams);
                     }
 
@@ -176,30 +158,32 @@ public class CookBookPhotoTeachingFragment extends Fragment implements Observabl
         }
     }
 
-//    private void setupToolbar() {
-//        // set ActionBar as Toolbar
-//        setSupportActionBar(mToolbar);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        mToolbar.setTitleTextColor(getResources().getColor(R.color.color_accent));
-//        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                onBackPressed();
-//            }
-//        });
-//    }
-
     @Override
     public void onScrollChanged(int left, int top, int oldLeft, int oldTop) {
         // get scroll y
         int scrollY = mScrollView.getScrollY();
 
-        // choose appropriate y
-        float newY = Math.max(mImageView.getHeight(), scrollY);
-
         // translate image and toolbar
-//        ViewCompat.setTranslationY(mToolbarLinearLayout, newY);
-        ViewCompat.setTranslationY(mImageFrameLayout, scrollY * 0.5f);
+        ViewCompat.setTranslationY(mImageFrameLayout, scrollY * 0.0f);
     }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        try {
+            mListener = (OnFragmentInteractionListener) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString()
+                    + " must implement OnFragmentInteractionListener");
+        }
+    }
+
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mListener = null;
+    }
+
 
 }
