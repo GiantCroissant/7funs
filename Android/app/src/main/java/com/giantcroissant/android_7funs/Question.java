@@ -84,7 +84,7 @@ public class Question {
     }
 
     public String getOwnerIconUrl() {
-        return ownerName;
+        return ownerIconUrl;
     }
 
     public void setOwnerIconUrl(String ownerIconUrl) {

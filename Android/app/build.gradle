@@ -25,4 +25,7 @@ dependencies {
     compile 'io.realm:realm-android:0.80.3'
     compile 'com.google.apis:google-api-services-youtube:v3-rev139-1.20.0'
     compile files('libs/YouTubeAndroidPlayerApi.jar')
+
+    compile 'com.parse.bolts:bolts-android:1.+'
+    compile 'com.parse:parse-android:1.+'
 }

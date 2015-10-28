@@ -3,17 +3,23 @@ package com.giantcroissant.android_7funs;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.parse.Parse;
+import com.parse.ParseInstallation;
 
-public class MainActivity extends ActionBarActivity {
+
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Parse.initialize(this, "GLT7893zw7eXqcElTXIBCFX7hDjEy9iVlIDSkJey", "xClJ3IbLZzBy7ja0oLjanXFJ7E2Tsp6c4hzouu4L");
+        ParseInstallation.getCurrentInstallation().saveInBackground();
     }
 
     @Override
